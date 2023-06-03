@@ -2,9 +2,9 @@
 //JAVA 21+
 //JAVA_OPTIONS --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED
 //DEPS org.asciidoctor:asciidoctorj:2.5.3
-//DEPS org.asciidoctor:asciidoctorj-diagram:2.2.1
+//DEPS org.asciidoctor:asciidoctorj-diagram:2.2.8
 //DEPS org.asciidoctor:asciidoctorj-revealjs:5.0.0.rc1
-//DEPS org.asciidoctor:asciidoctorj-chart:1.0.0.alpha.1
+//DEPS org.asciidoctor:asciidoctorj-chart:1.0.0
 //DEPS info.picocli:picocli:4.6.3
 
 import com.sun.net.httpserver.SimpleFileServer;
