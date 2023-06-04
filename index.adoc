@@ -1,4 +1,4 @@
-//usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec jbang adoc2reveal.java "$0" "$@" ; exit $?
+//usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec `$SHELL -c "which jbang"` adoc2reveal.java "$0" "$@" ; exit $?
 [.blackback]
 = Embracing Quarkus 3
 :date: 2023-06-05
