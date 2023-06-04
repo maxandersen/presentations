@@ -17,6 +17,9 @@ jobs:
           persist-credentials: false
           submodules: true  # TODO remove this if not using submodules in Hexo
 
+      - name: Setup upterm session
+        uses: lhotari/action-upterm@v1
+
       - name: Build page 🔧
         run: ./index.adoc
 
