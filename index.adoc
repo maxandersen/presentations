@@ -26,15 +26,15 @@
 :icons: font
 
 The Future is now +
-Max Rydahl Andersen +
 @maxandersen +
+Quarkus User Group Munich +
 
 image:images/icons/redhat.png[role=icon]
 
-[%notitle]
-== Quarkus All The Things
+[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
+== Starting Quarkus 3
 
-image::images/quarkusallthethings.png[background, size=cover]
+
 
 [%notitle]
 == Supersonic
@@ -48,13 +48,9 @@ image::images/subatomic.png[background, size=cover]
 
 [%notitle]
 == Hot Java 
+:classic: The classic wa
 
 image::images/hotjava.png[background]
-
-[%notitle]
-== Nice Cake!
-
-image::images/nice-cake-strawberry.avif[background, size=cover]
 
 [.notes]
 --
@@ -98,6 +94,19 @@ image::images/buildruntime-5.png[]
 
 image::images/buildruntime-6.png[]
 
+== Demo Time
+
+
+
+
+[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
+== Back to starting Quarkus 3
+
+== Why Quarkus 3
+
+[%step]
+A foundation to do more!
+
 [%notitle]
 == Quarkus 3
 
@@ -109,13 +118,14 @@ image::images/quarkus3highlights.png[background, size=cover]
 * `javax.*` packages are now in `jakarta.*`
 * reactive streams Flow to Java 9+ Flow API
 * Hibernate 5 to 6
-* ...
+* ... and more
+
+[.notes]
 
 == Updating to Quarkus 3
 
 * icon:heart[] `quarkus update --stream=3.0`
 * Powered by OpenRewrite (and Windup)
-
 
 [.notes]
 --
@@ -129,15 +139,162 @@ hibernate_seq -> todo_seq
 
 == Why Update
 
+[.blackback]
+== Jakarta EE 10
+
+image::images/lawyerdrivendevelopment.png[background]
+
+[%step]
+* Laywer Driven Development
+* javax.* -> jakarta.*
+* Everybody is finally doing it!
+
+[transition=fade]
+[.blackback]
+== Hibernate 6
+
+image::images/hackingonhibernate6.png[background]
+
+[transition=fade]
+== Hibernate 6
+
+* Rewrites of internals to enable faster innovation
+
+[%step]
+* Lots of optimizations from Quarkus learnings
+* Removal of Deprecations
+* Hibernate Reactive 2
+* Tune in for https://www.youtube.com/watch?v=nXnxcl4v9eg&list=PLsM3ZE5tGAVatO65JIxgskQh-OKoqM4F2[Quarkus Insights #131]
+
+== New Dev UI
+
+[%notitle]
+== Dev UI
+
+image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
+
+[.notes]
+
+== Quarkus CLI Plugins
+
+== Management Port
+
+[%step]
+* Probably the most requested feature
+* `quarkus.management.enabled=true`
+* `http://<host>:9000/q/health|metrics|info|...`
+
+[.notes]
+== /q/info
+
+[source,json]
+----
+{
+  "git" : {
+    "branch" : "master",
+    "commit" : {
+      "id" : "0d52564219c29e47f5f5878e8fd8e0d04329288b",
+      "time" : "2023-06-05T23:49:47+02:00"
+    }
+  },
+  "java" : {
+    "version" : "11.0.11"
+  },
+  "os" : {
+    "name" : "Mac OS X",
+    "version" : "11.3",
+    "arch" : "x86_64"
+  },
+  "build" : {
+    "group" : "io.quarkus.sample",
+    "artifact" : "todo-backend",
+    "version" : "1.0-SNAPSHOT",
+    "time" : "2023-06-06T00:02:26.692472+02:00"
+  }
+}
+----
+
+[%notitle,background-iframe="http://localhost:8080/q/dev-ui/io.quarkus.quarkus-info/information"]
+== /q/info
+
+== Migrations as Jobs
+
+Have a flyway or liquibase migration ?
+
+[%step]
+* Kubernetes Job auto-configured
+* Ensure migrations are run before app starts
+
+== Beyond 3.0
+
+=== io_uring
+
+* Drastic io performance improvements
+* Requires recent Linux kernel (RHEL 9+)
+
+=== Virtual Threads
+
+[%step]
+* `@RunOnVirtualThread` since 2.10 (May 2022)
+* Balance between OpenJDK vs Java ecosystem benefits
+* Stay tuned...
+
+=== Frontends 
+
+image::images/frontendrainbow.png[background]
+
+[%step]
+* Can we make them fun to develop ?
+* Can we support them all ?
+
+=== Frontend Rainbow
+
+[%step]
+* Qute Server Pages 
+* Renarde
+* Quinoa
+* WebAssets
+
+[.notes]
+---
+QSP
+easy use of qute for serving content
+
+renarde
+* Quarkus Web Framework
+* Serverside rendering using Qute
+
+quinoa
+enabling npm
+
+webassets 
+use of esbundle
+---
+
+=== Quinoa
+
+=== Qute Server Pages
+
+=== Other languages
+
+* Kotlin  
+* Groovy
+* Scala 3?
+
+
+[%notitle]
+== Quarkus All The Things
+
+image::images/quarkusallthethings.png[background, size=cover]
+
 == Conclusion
 
 [%step]
 - Quarkus is supersonic and subatomic Java
 - Developers get to have joy
 - Operations gets resources
-- Updates are doable
-- Customers get what they need faster
-- Because we broke some eggs!
+- Quarkus 3 is easy to update to
+- Quarkus 3 is a foundation for more
 - Try https://quarkus.io[quarkus.io]
 
 
