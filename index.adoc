@@ -177,6 +177,18 @@ image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
 
 == Quarkus CLI Plugins
 
+[%step]
+* Plugins can be ...
+    ** ...an executable (binary or script)
+    ** ...a jbang alias/script reference
+    ** ...a maven coordinates
+* Plugins come from...
+    ** ...`PATH`
+    ** ...JBang Catalogs
+    ** ...Quarkus Extensions
+
+[.notes]
+
 == Management Port
 
 [%step]
@@ -227,6 +239,16 @@ Have a flyway or liquibase migration ?
 
 == Beyond 3.0
 
+* ...or at least some of it
+
+=== Long Term Support
+
+[%step]
+* How to release fast but still support ?
+* Red Hat Build of Quarkus
+    ** 1.11,2.7,2.13,3.2
+* Quarkus 3.2+ will be community LTS
+
 === io_uring
 
 * Drastic io performance improvements
@@ -247,39 +269,36 @@ image::images/frontendrainbow.png[background]
 * Can we make them fun to develop ?
 * Can we support them all ?
 
-=== Frontend Rainbow
-
-[%step]
-* Qute Server Pages 
-* Renarde
-* Quinoa
-* WebAssets
-
-[.notes]
----
-QSP
-easy use of qute for serving content
-
-renarde
-* Quarkus Web Framework
-* Serverside rendering using Qute
-
-quinoa
-enabling npm
-
-webassets 
-use of esbundle
----
 
 === Quinoa
 
+* Use npm based frontend with Quarkus
+* Works with live-reload
+
+=== WebAssets
+
+* Use esbuild to bundle frontend assets
+
 === Qute Server Pages
 
-=== Other languages
+* Direct serving of Qute from `resources` as pages
+* `src/main/resource/templates/*` -> `qsp/*`
 
-* Kotlin  
-* Groovy
-* Scala 3?
+=== Renarde
+
+* Quarkus Web Framework
+* Serverside rendering using Qute
+
+[%notitle]
+=== Frontend Rainbow
+
+image::images/frontendrainbow.png[background]
+
+* Quinoa
+* Renarde
+* Qute Server Pages 
+* WebAssets
+
 
 
 [%notitle]

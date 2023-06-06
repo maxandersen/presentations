@@ -73,6 +73,7 @@ public class adoc2reveal implements Callable<Integer> {
     }
 
     private void registerRecursive(final Path root) throws IOException {
+        root.register(watchService, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
         // register all subfolders
         Files.walkFileTree(root, new SimpleFileVisitor<Path>() {
             @Override
