@@ -1,4 +1,9 @@
-///usr/bin/env jbang "$0" "$@" ; exit $?
+///usr/bin/env echo '
+/**** BOOTSTRAP jbang ****'>/dev/null
+command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup
+exec `$SHELL -c "which jbang"` "$0" "$@" ; exit $?
+\*** IMPORTANT: Any code including imports and annotations must come after this line ***/
+
 //JAVA 21+
 //JAVA_OPTIONS --add-opens java.base/sun.nio.ch=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED
 //DEPS org.asciidoctor:asciidoctorj:2.5.3
