@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - '*' # matches every branch that doesn't contain a '/'
-
+  workflow_dispatch:
+    inputs:
+      debug: # id of input
+        description: 'Run in debug mode' # description of input
+        required: false # make input required
+        default: 'false' # default value if no value is specified
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,10 +23,19 @@ jobs:
           submodules: true  # TODO remove this if not using submodules in Hexo
 
       - name: Setup upterm session
+        if: github.event.inputs.debug == 'true'
         uses: lhotari/action-upterm@v1
 
-      - name: Build page 🔧
-        run: ./index.adoc
+      - name: Install JBang 🔧
+        run: |
+          curl -sL https://sh.jbang.dev | bash -s - app setup
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
+      - name: Build 🏗️
+        run: |
+          jbang adoc2reveal.java index.adoc    
 
       - name: Deploy to GH Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
