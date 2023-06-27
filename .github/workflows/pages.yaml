@@ -35,7 +35,7 @@ jobs:
 
       - name: Build 🏗️
         run: |
-          jbang adoc2reveal.java index.adoc    
+          ~/.jbang/bin/jbang adoc2reveal.java index.adoc    
 
       - name: Deploy to GH Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
