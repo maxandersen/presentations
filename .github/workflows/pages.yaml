@@ -45,4 +45,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.BRANCH_NAME }}
+          publish_dir: .
+          destination_dir: ${{ env.BRANCH_NAME }}
+          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.md,.gitignore,.git'
