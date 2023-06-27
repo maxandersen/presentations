@@ -1,13 +1,13 @@
 //usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec `$SHELL -c "which jbang"` adoc2reveal.java "$0" "$@" ; exit $?
 [.blackback]
-= Embracing Quarkus 3
-:date: 2023-06-05
+= ChatGPT plugins quick start
+:date: 2023-06-27
 :revealjs_theme: white
 :customcss: css/custom.css
-:favicon: ./images/favicon.ico
+:favicon: ./favicon.ico
 // better 
-:title-slide-background-image: images/blackspace.png
-:slide-background-image: images/slide2-white.png
+:title-slide-background-image: botcodingjava.webp
+:slide-background-image: slide2-white.png
 :revealjs_fragmentInURL: true
 :revealjs_hash: true
 :revealjs_controls: true
@@ -17,303 +17,206 @@
 :revealjs_showSlideNumber: speaker
 :revealjs_autoPlayMedia: true
 :revealjs_totalTime: 2700
-//:revealjs_parallaxBackgroundImage:  images/mntbackground.jpg
+//:revealjs_parallaxBackgroundImage:  mntbackground.jpg
 //:revealjs_parallaxBackgroundSize: 4936px 2092px
 :source-highlighter: highlight.js
 // leave empty or pick style from gallery at https://highlightjs.org/static/demo/ and find url at https://cdnjs.com/libraries/highlight.js
 :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/solarized-dark.min.css
 :revealjs_preloadIframes: true
 :icons: font
+:imagesdir: images
 
-The Future is now +
+Using Java, Quarkus and JBang +
 @maxandersen +
-Quarkus User Group Munich +
+decoding AI in Java +
 
-image:images/icons/redhat.png[role=icon]
+image:icons/redhat.png[role=icon]
 
-[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
-== Starting Quarkus 3
+== What is your day-to-day programming language?
 
+Is it Java, Python, JavaScript, Go, C# or something else?
 
-
-[%notitle]
-== Supersonic
-
-image::images/supersonic.png[background, size=cover]
-
-[%notitle]
-== Subatomic
-
-image::images/subatomic.png[background, size=cover]
-
-[%notitle]
-== Hot Java 
-:classic: The classic way
-
-image::images/hotjava.png[background]
-
-[.notes]
---
-That is a proper cake!
-
-Excellent performance,
-Ability to have super density
-- all somethig that make your devops team
-happy and especially the financial department
-and even better yet - your users can wait less if done right!
-
-And then the toppings are the awesome developer experience.
---
+Write it in chat!
 
 [transition=fade]
-== {classic}
-image::images/buildruntime-1.png[]
+== A User talks to ChatGPT
 
-[transition=none]
-== {classic}
-
-image::images/buildruntime-2.png[]
-
-[transition=none]
-== {classic}
-
-image::images/buildruntime-3.png[]
-
-[transition=none]
-== {classic}
-
-image::images/buildruntime-4.png[]
-
-[transition=none]
-== {classic}
-
-image::images/buildruntime-5.png[]
-
-[transition=none]
-== The Quarkus Way
-
-image::images/buildruntime-6.png[]
-
-== Demo Time
+[plantuml, chatgpt, svg]
+....
+!theme bluegray
 
 
+agent browser
+actor user
 
-
-[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
-== Back to starting Quarkus 3
-
-== Why Quarkus 3
-
-[%step]
-A foundation to do more!
-
-[%notitle]
-== Quarkus 3
-
-image::images/quarkus3highlights.png[background, size=cover]
-
-== Updating to Quarkus 3
-
-[%step]
-* `javax.*` packages are now in `jakarta.*`
-* reactive streams Flow to Java 9+ Flow API
-* Hibernate 5 to 6
-* ... and more
-
-[.notes]
-
-== Updating to Quarkus 3
-
-* icon:heart[] `quarkus update --stream=3.0`
-* Powered by OpenRewrite (and Windup)
-
-[.notes]
---
-```bash
-git clone https://github.com/quarkusio/todo-demo-app
-quarkus dev
-quarkus update --stream=3.0
-hibernate_seq -> todo_seq
-```
---
-
-== Why Update
-
-[.blackback]
-== Jakarta EE 10
-
-image::images/lawyerdrivendevelopment.png[background]
-
-[%step]
-* Laywer Driven Development
-* javax.* -> jakarta.*
-* Everybody is finally doing it!
-
-[transition=fade]
-[.blackback]
-== Hibernate 6
-
-image::images/hackingonhibernate6.png[background]
-
-[transition=fade]
-== Hibernate 6
-
-* Rewrites of internals to enable faster innovation
-
-[%step]
-* Lots of optimizations from Quarkus learnings
-* Removal of Deprecations
-* Hibernate Reactive 2
-* Tune in for https://www.youtube.com/watch?v=nXnxcl4v9eg&list=PLsM3ZE5tGAVatO65JIxgskQh-OKoqM4F2[Quarkus Insights #131]
-
-== New Dev UI
-
-[%notitle]
-== Dev UI
-
-image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
-
-[.notes]
-
-== Quarkus CLI Plugins
-
-[%step]
-* Plugins can be ...
-    ** ...an executable (binary or script)
-    ** ...a jbang alias/script reference
-    ** ...a maven coordinates
-* Plugins come from...
-    ** ...`PATH`
-    ** ...JBang Catalogs
-    ** ...Quarkus Extensions
-
-[.notes]
-
-== Management Port
-
-[%step]
-* Probably the most requested feature
-* `quarkus.management.enabled=true`
-* `http://<host>:9000/q/health|metrics|info|...`
-
-[.notes]
-== /q/info
-
-[source,json]
-----
-{
-  "git" : {
-    "branch" : "master",
-    "commit" : {
-      "id" : "0d52564219c29e47f5f5878e8fd8e0d04329288b",
-      "time" : "2023-06-05T23:49:47+02:00"
-    }
-  },
-  "java" : {
-    "version" : "11.0.11"
-  },
-  "os" : {
-    "name" : "Mac OS X",
-    "version" : "11.3",
-    "arch" : "x86_64"
-  },
-  "build" : {
-    "group" : "io.quarkus.sample",
-    "artifact" : "todo-backend",
-    "version" : "1.0-SNAPSHOT",
-    "time" : "2023-06-06T00:02:26.692472+02:00"
-  }
+rectangle gpt as "GPT" {
+    agent api as "api"
+    database model as "GPT Model"
 }
+
+browser -> api : "calls"
+api -> model 
+user -> browser : "enter prompt"
+....
+
+[transition=fade]
+== Your App talks to ChatGPT
+
+[plantuml, chatgptapp, svg]
+....
+!theme bluegray
+
+agent app 
+
+rectangle gpt as "GPT" {
+    agent api as "api"
+    database model as "GPT Model"
+}
+
+app -> api : "calls"
+api -> model 
+....
+
+== Your app talks to ChatGPT
+
+[source,java]
+----
+GPT gpt = RestClientBuilder.newBuilder()
+    .baseUri(URI.create("https://api.openai.com"))
+    .build(GPT.class);
+		
+	final List<Map<String, String>> messages = new ArrayList<>();
+			messages.add(prompt("system", """
+          You are to advise a software 
+          developer on what the following code found 
+          in a file at"""
+           + sourceFile + " does."));
+			messages.add(prompt("user", 
+      Files.readAllLines(sourceFile).stream().collect(Collectors.joining("\n"))));
+		
+	 var result = gpt.completions(token, 
+      Map.of("model", model, 
+        "temperature", temperature,  
+        "messages", messages));
 ----
 
-[%notitle,background-iframe="http://localhost:8080/q/dev-ui/io.quarkus.quarkus-info/information"]
-== /q/info
+https://github.com/maxandersen/jbang-catalog/blob/master/explain/explain.java
 
-== Migrations as Jobs
+== Your app talks to ChatGPT part 2
 
-Have a flyway or liquibase migration ?
+[source,bash]
+----
+$ quarkus explain pom.xml
+Requesting explanation of pom.xml with model gpt-3.5-turbo and temperature 0.8. Have patience...
+This is an XML file for a Maven project, which is a build automation tool primarily used for Java projects. The file contains information about the project, its dependencies, and the build process.
 
-[%step]
-* Kubernetes Job auto-configured
-* Ensure migrations are run before app starts
+- The `groupId`, `artifactId`, and `version` tags define the project's coordinates.
+- The `properties` section defines variables used throughout the file, such as the version of the Quarkus platform, the version of the compiler plugin, and whether integration tests should be skipped.
+- The `dependencyManagement` section lists dependencies that are used throughout the project and provides a way to manage their versions in one place.
+- The `dependencies` section lists the project's dependencies, which include the Camel Quarkus Mail component, the Quarkus Arc extension, and the Quarkus JUnit 5 extension.
+- The `build` section lists plugins used during the build process, including the Quarkus Maven plugin, the Maven compiler plugin, and the Maven Surefire and Failsafe plugins. These plugins are responsible for compiling code, running tests, and generating executable code, among other tasks.
+- The `profiles` section defines build profiles that can be activated depending on certain conditions. In this case, the `native` profile is activated when the `native` property is set, and it sets options for building a native executable.
+----
 
-== Beyond 3.0
+// # tag::chatgptwithplugins[]
+[transition=fade]
+== ChatGPT with Plugins
 
-* ...or at least some of it
+Make ChatGPT talk to your app!
 
-=== Long Term Support
+[plantuml, chatgptplugin, svg]
+.... 
+!theme bluegray
 
-[%step]
-* How to release fast but still support ?
-* Red Hat Build of Quarkus
-    ** 1.11,2.7,2.13,3.2
-* Quarkus 3.2+ will be community LTS
+agent browser
+actor user
 
-=== io_uring
+agent plugin as "ChatGPT Plugin"
+database localmodel as "Plugin Model"
+agent plugin2 as "ChatGPT Plugin"
+agent plugin3 as "ChatGPT Plugin"
 
-* Drastic io performance improvements
-* Requires recent Linux kernel (RHEL 9+)
+rectangle gpt as "GPT" {
+    agent api as "api"
+    database model as "GPT Model"
+}
 
-=== Virtual Threads
+browser -> api : "calls"
+api -> model 
+user -> browser : "enter prompt"
 
-[%step]
-* `@RunOnVirtualThread` since 2.10 (May 2022)
-* Balance between OpenJDK vs Java ecosystem benefits
-* Stay tuned...
+model->plugin : "calls"
+plugin->localmodel
 
-=== Frontends 
+model-->plugin2 : "calls"
+model-->plugin3 : "calls"
+....
+// # end::chatgptwithplugins[]
 
-image::images/frontendrainbow.png[background]
+== Demo
 
-[%step]
-* Can we make them fun to develop ?
-* Can we support them all ?
+https://chat.openai.com[https://chat.openai.com]
 
+include::index.adoc[tags=chatgptwithplugins]
 
-=== Quinoa
-
-* Use npm based frontend with Quarkus
-* Works with live-reload
-
-=== WebAssets
-
-* Use esbuild to bundle frontend assets
-
-=== Qute Server Pages
-
-* Direct serving of Qute from `resources` as pages
-* `src/main/resource/templates/*` -> `qsp/*`
-
-=== Renarde
-
-* Quarkus Web Framework
-* Serverside rendering using Qute
-
-[%notitle]
-=== Frontend Rainbow
-
-image::images/frontendrainbow.png[background]
-
-* Quinoa
-* Renarde
-* Qute Server Pages 
-* WebAssets
-
-
-
-[%notitle]
-== Quarkus All The Things
-
-image::images/quarkusallthethings.png[background, size=cover]
-
-== Conclusion
+== ChatGPT with Plugins 
 
 [%step]
-- Quarkus is supersonic and subatomic Java
-- Developers get to have joy
-- Operations gets resources
-- Quarkus 3 is easy to update to
-- Quarkus 3 is a foundation for more
-- Try https://quarkus.io[quarkus.io]
+* Unlimited opportunities for plugins
+[%step]
+** Home Automation? i.e. HomeAssistant
+** Issue tracker?
+** Quarkus Devmode?
+** Your own app?
+** ...just imagine
+* Must have Plus Subscription
+* Plugins can be written in any language
+
+[transition=fade]
+== How to make a plugin with Python
+:repo: https://github.com/openai/plugins-quickstart/blob/main
+
+- link:{repo}.well-known/ai-plugin.json[`.well-known/ai-plugin.json`] describing the plugin
+- link:{repo}/logo.png[`logo.png`] for the plugin
+- link:{repo}/openapi.yaml[`openapi.yaml`] descriptor the API
+- link:{repo}/requirements.txt[`requirements.txt`] dependencies for the plugin
+- link:{repo}/main.py[`main.py`] code
+
+[transition=fade]
+== How to make a plugin with Java
+:repo: https://github.com/maxandersen/openai-java-plugins-quickstart/blob/main
+
+- link:{repo}/.well-known/ai-plugin.json[`.well-known/ai-plugin.json`] describing the plugin
+- link:{repo}/logo.png[`logo.png`] for the plugin
+- link:{repo}/openapi.yaml[`openapi.yaml`] OpenAPI descriptor
+- link:{repo}/main.java[`main.java`] code and dependencies for the plugin
+
+[transition=fade]
+== How to make a minimal plugin with Java
+:repo: https://github.com/maxandersen/openai-java-plugins-quickstart/blob/quarkus
+
+- link:{repo}/.well-known/ai-plugin.json[`.well-known/ai-plugin.json`] describing the plugin
+- link:{repo}/logo.png[`logo.png`] for the plugin
+- link:{repo}/main.java[`main.java`] code, dependencies and OpenAPI for the plugin
+
+== What I used in this demo
+
+- https://jbang.dev/[JBang] - allow for java builder/launcher with embedded dependencies
+- https://quarkus.io[Quarkus] - excellent Java framework for building cloud native apps
+
+include::index.adoc[tags=chatgptwithplugins]
+
+== Try it out
+
+[%step]
+- https://github.com/maxandersen/openai-java-plugins-quickstart - Java plugin quickstart
+- Use it locally
+- If you deploy it, remember to add security/auth!
+
+[%step]
+- Questions?
+
+ 
+
 
 
