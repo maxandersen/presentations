@@ -306,6 +306,47 @@ image::images/frontendrainbow.png[background]
 
 image::images/quarkusallthethings.png[background, size=cover]
 
+== How Green is Quarkus?
+
+image::images/greenquarkus.png[]]
+
+[%notitle]
+=== Green Quarkus
+
+image::images/green-1.svg[background, size=cover]
+
+[%notitle]
+=== Green Quarkus
+
+image::images/green-2.svg[background, size=cover]
+
+[%notitle]
+=== Green Quarkus
+
+image::images/green-3.svg[background, size=cover]
+
+[%notitle]
+=== Green Quarkus
+
+image::images/green-4.svg[background, size=cover]
+
+[.columns]
+=== Does Quarkus reduce carbon emissions?
+
+[.column]
+image::images/greenquarkus.png[]
+
+[.column]
+====
+Quarkus saves +
+
+* Time
+* Money
+* Carbon (~2x)
+
+Native? It depends
+====
+
 == Conclusion
 
 [%step]
