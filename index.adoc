@@ -25,16 +25,14 @@
 :revealjs_preloadIframes: true
 :icons: font
 
-The Future is now +
+KMD Ballerup +
 @maxandersen +
-Quarkus User Group Munich +
+2023-09-05
 
 image:images/icons/redhat.png[role=icon]
 
 [%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
 == Starting Quarkus 3
-
-
 
 [%notitle]
 == Supersonic
@@ -42,12 +40,12 @@ image:images/icons/redhat.png[role=icon]
 image::images/supersonic.png[background, size=cover]
 
 [%notitle]
-== Subatomic
+=== Subatomic
 
 image::images/subatomic.png[background, size=cover]
 
 [%notitle]
-== Hot Java 
+=== Hot Java 
 :classic: The classic way
 
 image::images/hotjava.png[background]
@@ -66,31 +64,31 @@ And then the toppings are the awesome developer experience.
 --
 
 [transition=fade]
-== {classic}
+=== {classic}
 image::images/buildruntime-1.png[]
 
 [transition=none]
-== {classic}
+=== {classic}
 
 image::images/buildruntime-2.png[]
 
 [transition=none]
-== {classic}
+=== {classic}
 
 image::images/buildruntime-3.png[]
 
 [transition=none]
-== {classic}
+=== {classic}
 
 image::images/buildruntime-4.png[]
 
 [transition=none]
-== {classic}
+=== {classic}
 
 image::images/buildruntime-5.png[]
 
 [transition=none]
-== The Quarkus Way
+=== The Quarkus Way
 
 image::images/buildruntime-6.png[]
 
@@ -108,11 +106,11 @@ image::images/buildruntime-6.png[]
 A foundation to do more!
 
 [%notitle]
-== Quarkus 3
+=== Quarkus 3
 
 image::images/quarkus3highlights.png[background, size=cover]
 
-== Updating to Quarkus 3
+=== Updating to Quarkus 3
 
 [%step]
 * `javax.*` packages are now in `jakarta.*`
@@ -122,7 +120,7 @@ image::images/quarkus3highlights.png[background, size=cover]
 
 [.notes]
 
-== Updating to Quarkus 3
+=== Updating to Quarkus 3
 
 * icon:heart[] `quarkus update --stream=3.0`
 * Powered by OpenRewrite (and Windup)
@@ -137,26 +135,26 @@ hibernate_seq -> todo_seq
 ```
 --
 
-== Why Update
+=== Why Update
 
 [.blackback]
-== Jakarta EE 10
+=== Jakarta EE 10
 
 image::images/lawyerdrivendevelopment.png[background]
 
 [%step]
-* Laywer Driven Development
+* Lawyer Driven Development
 * javax.* -> jakarta.*
 * Everybody is finally doing it!
 
 [transition=fade]
 [.blackback]
-== Hibernate 6
+=== Hibernate 6
 
 image::images/hackingonhibernate6.png[background]
 
 [transition=fade]
-== Hibernate 6
+=== Hibernate 6
 
 * Rewrites of internals to enable faster innovation
 
@@ -166,16 +164,16 @@ image::images/hackingonhibernate6.png[background]
 * Hibernate Reactive 2
 * Tune in for https://www.youtube.com/watch?v=nXnxcl4v9eg&list=PLsM3ZE5tGAVatO65JIxgskQh-OKoqM4F2[Quarkus Insights #131]
 
-== New Dev UI
+=== New Dev UI
 
 [%notitle]
-== Dev UI
+=== Dev UI
 
 image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
 
 [.notes]
 
-== Quarkus CLI Plugins
+=== Quarkus CLI Plugins
 
 [%step]
 * Plugins can be ...
@@ -189,7 +187,7 @@ image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
 
 [.notes]
 
-== Management Port
+=== Management Port
 
 [%step]
 * Probably the most requested feature
@@ -197,7 +195,7 @@ image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
 * `http://<host>:9000/q/health|metrics|info|...`
 
 [.notes]
-== /q/info
+=== /q/info
 
 [source,json]
 ----
@@ -227,9 +225,9 @@ image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
 ----
 
 [%notitle,background-iframe="http://localhost:8080/q/dev-ui/io.quarkus.quarkus-info/information"]
-== /q/info
+=== /q/info
 
-== Migrations as Jobs
+=== Migrations as Jobs
 
 Have a flyway or liquibase migration ?
 
@@ -261,14 +259,13 @@ Have a flyway or liquibase migration ?
 * Balance between OpenJDK vs Java ecosystem benefits
 * Stay tuned...
 
-=== Frontends 
+== Frontends 
 
 image::images/frontendrainbow.png[background]
 
 [%step]
 * Can we make them fun to develop ?
 * Can we support them all ?
-
 
 === Quinoa
 
@@ -336,6 +333,7 @@ image::images/green-4.svg[background, size=cover]
 [.column]
 image::images/greenquarkus.png[]
 
+[%step]
 [.column]
 ====
 Quarkus saves +
@@ -344,8 +342,25 @@ Quarkus saves +
 * Money
 * Carbon (~2x)
 
-Native? It depends
+[%step]
+Native? +
+[%step]
+It depends
 ====
+
+== Is Quarkus Secure? 
+
+[%step]
+YES!^*^
+
+[%notitle,background-iframe="https://quarkus.io/guides/security-architecture"]
+=== Security Architecture
+
+[%notitle,background-iframe="https://quarkus.io/guides/security-authentication"]
+
+[%notitle,background-iframe="https://quarkus.io/guides/security-openid-connect-providers"]
+=== OpenID Providers
+
 
 == Conclusion
 
@@ -354,6 +369,8 @@ Native? It depends
 - Developers get to have joy
 - Operations gets resources
 - Quarkus 3 is easy to update to
+- Quarkus is green
+- Quarkus is secure
 - Quarkus 3 is a foundation for more
 - Try https://quarkus.io[quarkus.io]
 
