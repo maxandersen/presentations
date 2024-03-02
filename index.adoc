@@ -1,7 +1,7 @@
 //usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec `$SHELL -c "which jbang"` adoc2reveal.java "$0" "$@" ; exit $?
 [.blackback]
 = Embracing Quarkus 3
-:date: 2023-06-05
+:date: 2023-10-10
 :revealjs_theme: white
 :customcss: css/custom.css
 :favicon: ./images/favicon.ico
@@ -25,9 +25,9 @@
 :revealjs_preloadIframes: true
 :icons: font
 
-KMD Ballerup +
+BankData, Aarhus +
 @maxandersen +
-2023-09-05
+2023-10-10
 
 image:images/icons/redhat.png[role=icon]
 
