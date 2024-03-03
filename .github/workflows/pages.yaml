@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - '*' # matches every branch that doesn't contain a '/'
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -17,14 +21,26 @@ jobs:
           persist-credentials: false
           submodules: true  # TODO remove this if not using submodules in Hexo
 
+      - name: Setup JBang
+        uses: jbangdev/setup-jbang@main
+
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
       - name: Setup upterm session
+        if: github.event.inputs.debug == 'true'
         uses: lhotari/action-upterm@v1
 
       - name: Build page 🔧
         run: ./index.adoc
 
+      - name: Extract Branch
+        uses: nelonoel/branch-name@v1.0.1
+
       - name: Deploy to GH Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.ref }}
+          publish_dir: .
+          destination_dir: ${{ env.BRANCH_NAME }}
+          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.adoc,README.md,.gitignore,.git'
