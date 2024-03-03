@@ -67,6 +67,8 @@ public class adoc2reveal implements Callable<Integer> {
     private Asciidoctor asciidoctor;
     private WatchService watchService;
 
+    private InetSocketAddress address;
+
     public static void main(String... args) {
        System.exit(new CommandLine(new adoc2reveal()).execute(args));
     }
@@ -114,7 +116,7 @@ public class adoc2reveal implements Callable<Integer> {
         Path p2watch = file.getAbsoluteFile().getParentFile().toPath();
 
         if(serve) {
-            var address = new InetSocketAddress(8000);
+            address = new InetSocketAddress(8000);
             System.out.println("Serving on http://" +  address.getHostString() + ":" + address.getPort() + " from " + p2watch + " ...");
 
             var server = SimpleFileServer.createFileServer(address, 
@@ -162,6 +164,12 @@ public class adoc2reveal implements Callable<Integer> {
                                         .build()
                         ).build()
         );
-        System.out.printf("Done Rendering %s\n",file);
+
+        if(address != null) {
+            System.out.println("Done Rendering " + file + " on http://" +  address.getHostString() + ":" + address.getPort());
+        } else {
+            System.out.println("Done Rendering " + file);
+        }
+
     }
 }

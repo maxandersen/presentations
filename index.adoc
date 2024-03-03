@@ -1,173 +1,171 @@
 //usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec `$SHELL -c "which jbang"` adoc2reveal.java "$0" "$@" ; exit $?
 [.blackback]
-= Java is dead!?
+= 30 år!
 :date: 2024-03-05
 :revealjs_theme: black
 :customcss: css/custom.css
 :favicon: ./images/favicon.ico
-// better 
+// bedre 
 :title-slide-background-image: images/blackspace.png
 :slide-background-image: images/slide2-white.png
 :revealjs_fragmentInURL: true
 :revealjs_hash: true
 :revealjs_controls: true
-:revealjs_controlsLayout: edges
+:revealjs_controlsLayout: kanter
 :revealjs_controlsTutorial: true
 :revealjs_slideNumber: c/t
-:revealjs_showSlideNumber: speaker
+:revealjs_showSlideNumber: taler
 :revealjs_autoPlayMedia: true
 :revealjs_totalTime: 2700
 //:revealjs_parallaxBackgroundImage:  images/mntbackground.jpg
 //:revealjs_parallaxBackgroundSize: 4936px 2092px
 :source-highlighter: highlight.js
-// leave empty or pick style from gallery at https://highlightjs.org/static/demo/ and find url at https://cdnjs.com/libraries/highlight.js
+// lad være tom eller vælg stil fra galleri på https://highlightjs.org/static/demo/ og find url på https://cdnjs.com/libraries/highlight.js
 :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/solarized-dark.min.css
 :revealjs_preloadIframes: true
 :icons: font
 
-EAMV, Herning +
+Erhvervsakademi Midtvest, Herning +
 @maxandersen +
 2024-03-05
 
-image:images/icons/redhat.png[role=icon]
+image:images/icons/redhat.png[rolle=ikon]
 
 [.notes]
 --
-* Welcome and brief introduction
-* Overview of Java's role
-* "MythBusters" theme introduction
+* Velkommen og kort introduktion
+* Oversigt over Java's rolle
+* "MythBusters" tema introduktion
 --
 
-== Agenda
-* Overview of today's session
-* List of myths to be debunked
-* Workshop and Q&A segments
+== Spørgsmål: 
 
-== Me
+[%step]
+Kender du til Java?
+[%step]
+Bruger du Java?
+[%step]
+Er Java dødt?
 
-* '92-'96 - Informatik Ass. og Datamatiker i Ikast
+== Mig
+
+* '94-'96 - Datamatiker i Ikast
 * '98-'00 - Datalog i Aalborg
 * '00-'04 - Softwareudvikler i Aarhus
 * '04-'17 - Open Source Udvikler i Neuchatel, Schweiz 
 * '21-'24 - Open Source Udvikler i Pederstrup, Fyn
 
 [%notitle]
-=== Adaptable Dinosaur
+=== Tilpasningsdygtig Dinosaur
 image::images/adaptabledinosaur.webp[]
 
 [%notitle]
-=== Me 2
+=== Mig 2
 
-Contributed to:: Hibernate, JBoss AS/WildFly, JBoss Tools, Eclipse, Ceylon, OpenShift, Quarkus, ...
+Bidraget til:: Hibernate, JBoss AS/WildFly, JBoss Tools, Eclipse, Ceylon, OpenShift, Quarkus, ...
 
-Worked closely with:: OpenJDK, GraalVM, Apache Camel, vert.x, KeyCloak, JetBrains, Docker, ...
+Arbejdet tæt sammen med:: OpenJDK, GraalVM, Apache Camel, vert.x, KeyCloak, Microsoft VSCode, JetBrains, Docker, ...
 
-Side Project:: JBang, HomeAssistant
+Sideprojekter:: JBang, Home Assistant, ...
 
-Top Programming Languages:: Java, Python 
+Top Programmeringssprog:: Java, Python 
 
-=== My Main Job
+=== Mit Hovedjob
 
-Distinguished Engineer
+Fremtrædende Ingeniør
 
 [transition=fade]
-==== My Main Job
-Diplomatic [.line-through]#Distinguished# Engineer
+==== Mit Hovedjob
 
-== Questions: 
+Diplomatisk [.line-through]#Fremtrædende# Ingeniør
 
-[%step]
-Do you know Java?
-[%step]
-Do you use Java?
-[%step]
-Is Java dead ?
+
 
 [%notitle]
 == Mythbusting!
 image::images/mythbusting.webp[background]
 
 
-== Myth #1: Noone is using Java!
+== Myte #1: Ingen bruger Java!
 
 [.notes]
 --
-* Statement: "Java is Dead"
-* The reality: Statistics and trends
-* Interactive Poll: Audience's view
+* Udsagn: "Java er dødt"
+* Virkeligheden: Statistikker og tendenser
+* Interaktiv Afstemning: Publikums synspunkt
 --
 
 [%notitle]
 === Netflix 
 
-"Every backend at ??? is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February ????
+"Hver backend hos ??? er i bund og grund en Java app....2800 Java applikationer...mikroservices af forskellige størrelser....1500 interne biblioteker" - Februar ????
 
 [%notitle]
-=== Netflix reveal
+=== Netflix afsløring
 
-"Every backend at Netflix is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February 2024
+"Hver backend hos Netflix er i bund og grund en Java app....2800 Java applikationer...mikroservices af forskellige størrelser....1500 interne biblioteker" - Februar 2024
 
 image::images/netflixjava.png[]
 
 https://www.infoq.com/presentations/netflix-java/
 
-=== The Big Ones ?
+=== De Store ?
 
 Microsoft, Amazon, Google, Twitter, LinkedIn, ..
 
-=== What about Startups ? 
+=== Hvad med Startups ? 
 
-Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda,  Uber, Airbnb, ...
+Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda, Uber, Airbnb, ...
 
-=== Denmark
+=== Danmark
 
 Danske Bank, Maersk, Systematic, Netcompany, Trifork, LEGO, Bang & Olufsen, KMD, DSB, Rejseplanen, BankData, JYSK, ...
 
-=== Language Evolution
+=== Sprogudvikling
 
 
-== Myth #2: Java is Verbose
+== Myte #2: Java er Omstændeligt
 
 [.notes]
 --
-* Statement: "Java is Verbose"
-* Java's evolution: Code comparison
-* Workshop Segment: Refactor Java code
+* Udsagn: "Java er Omstændeligt"
+* Java's udvikling: Kode sammenligning
+* Workshop Segment: Refaktor Java kode
 --
 
 [transition=fade]
-=== Java Hello World
+=== Java Hej Verden
 
 [source,java]
 ----
 public class HelloWorld {
   public static void main(String[] args) {
-    System.out.println("Hello, World");
+    System.out.println("Hej, Verden");
   }
 }
 ----
 
 [transition=fade]
-=== Java 21 Hello World
+=== Java 21 Hej Verden
 
 [source,java]
 ----
 void main() {
-  System.out.println("Hello, World");
+  System.out.println("Hej, Verden");
 }
 ----
 
 [transition=fade]
-=== Java 22 Hello World
+=== Java 22 Hej Verden
 
 [source,java]
 ----
 void main() {
-  println("Hello, World");
+  println("Hej, Verden");
 }
 ----
 
-=== Pre-Java 5: File I/O
+=== Pre-Java 5: Fil I/O
 
 [source,java]
 ----
@@ -179,7 +177,7 @@ public class ReadFileJava6 {
     public static void main(String[] args) {
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("example.txt"));
+            reader = new BufferedReader(new FileReader("eksempel.txt"));
             String line;
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
@@ -199,7 +197,7 @@ public class ReadFileJava6 {
 }
 ----
 
-=== Java 5: static import
+=== Java 5: statisk import
 
 [source,java]
 ----
@@ -212,7 +210,7 @@ public class ReadFileJava6 {
     public static void main(String[] args) {
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader("example.txt"));
+            reader = new BufferedReader(new FileReader("eksempel.txt"));
             String line;
             while ((line = reader.readLine()) != null) {
                 out.println(line);
@@ -233,7 +231,7 @@ public class ReadFileJava6 {
 ----
 
 [transition=fade]
-=== Java 7: try-with-resources
+=== Java 7: try-med-ressourcer
 
 [source,java]
 ----
@@ -244,7 +242,7 @@ import static java.lang.System.out;
 
 public class ReadFileJava7 {
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("eksempel.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 out.println(line);
@@ -269,7 +267,7 @@ import static java.lang.System.out;
 
 public class ReadFileJava8 {
     public static void main(String[] args) {
-        try (Stream<String> stream = lines(Paths.get("example.txt"))) {
+        try (Stream<String> stream = lines(Paths.get("eksempel.txt"))) {
             stream.forEach(out::println);
         } catch (IOException e) {
             e.printStackTrace();
@@ -291,7 +289,7 @@ import static java.lang.System.out;
 
 public class ReadFileJava8 {
     public static void main(String[] args) {
-        try (var stream = lines(Paths.get("example.txt"))) {
+        try (var stream = lines(Paths.get("eksempel.txt"))) {
             stream.forEach(out::println);
         } catch (IOException e) {
             e.printStackTrace();
@@ -313,8 +311,8 @@ import static java.lang.System.out;
 public class ReadFileJava11 {
     public static void main(String[] args) {
         try {
-            var content = readString(Path.of("example.txt"));
-            out.println(content);
+            var indhold = readString(Path.of("eksempel.txt"));
+            out.println(indhold);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -322,7 +320,7 @@ public class ReadFileJava11 {
 }
 ----
 
-=== Java 21: unnamed class
+=== Java 21: unavngivet klasse
 
 [source,java]
 ----
@@ -333,78 +331,78 @@ import static java.lang.System.out;
 
 void main(String[] args) {
     try {
-        out.println(readString(of("example.txt")));
+        out.println(readString(of("eksempel.txt")));
     } catch (IOException e) {
         e.printStackTrace();
     }
 }
 ----
 
-=== Notable others
+=== Bemærkelsesværdige andre
 
-=== Java: Strings
+=== Java: Strenge
 
 [source,java]
 ----
-String name = "John";
-int age = 55;
-String content = "Hi " + name + ",\n\n" +
-                "You are " + age + " years old.\n\n" +
-                "Best regards,\n" +
+String navn = "John";
+int alder = 55;
+String indhold = "Hej " + navn + ",\n\n" +
+                "Du er " + alder + " år gammel.\n\n" +
+                "De bedste hilsner,\n" +
                 "Max";
 ----
 
 [transition=fade]
-=== Java 17 & 21: Text Blocks & Templates
+=== Java 17 & 21: Tekstblokke & Skabeloner
 
 [source,java]
 ----
-String name = "John";
-int age = 55;
-String content = STR."""
-                Hi \{name},
+String navn = "John";
+int alder = 55;
+String indhold = STR."""
+                Hej \{navn},
                 
-                You are \{age} years old.
+                Du er \{alder} år gammel.
                 
-                Best regards,
+                De bedste hilsner,
                 Max
                 """;
 ----
 
 [transition=fade]
-=== Data Classes
+=== Dataklasser
 
 [source,java,linenums]
 ----
-class Employee {
+class Ansat {
  
-    private String firstName;
-    private String lastName;
+    private String fornavn;
+    private String efternavn;
     private int Id;
  
-    public Employee(String firstName, String lastName,
+    public Ansat(String fornavn, String efternavn,
                     int Id)
     {
  
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fornavn = fornavn;
+        this.efternavn = efternavn;
         this.Id = Id;
     }
  
-    public void setFirstName(String firstName)
+    public void setFornavn(String fornavn)
     {
-        this.firstName = firstName;
+        this.fornavn = fornavn;
     }
  
-    public String getFirstName() { return firstName; }
+    public String getFornavn() { return fornavn; }
  
-    public void setLastName(String lasstName)
+    public void setEfternavn(String efternavn)
     {
  
-        this.lastName = lastName;
+        this.efternavn = efternavn;
     }
  
-    public String getLastName() { return lastName; }
+    public String getEfternavn() { return efternavn; }
  
     public void setId(int Id) { this.Id = Id; }
  
@@ -413,27 +411,27 @@ class Employee {
     public String toString()
     {
  
-        return "Employee [firstName=" + firstName
-            + ", lastName=" + lastName + ", Id=" + Id + "]";
+        return "Ansat [fornavn=" + fornavn
+            + ", efternavn=" + efternavn + ", Id=" + Id + "]";
     }
  
     @Override public int hashCode()
     {
  
-        final int prime = 31;
-        int result = 1;
+        final int prim = 31;
+        int resultat = 1;
  
-        result = prime * result + Id;
-        result = prime * result
-                 + ((firstName == null)
+        resultat = prim * resultat + Id;
+        resultat = prim * resultat
+                 + ((fornavn == null)
                         ? 0
-                        : firstName.hashCode());
-        result
-            = prime * result
-              + ((lastName == null) ? 0
-                                    : lastName.hashCode());
+                        : fornavn.hashCode());
+        resultat
+            = prim * resultat
+              + ((efternavn == null) ? 0
+                                    : efternavn.hashCode());
  
-        return result;
+        return resultat;
     }
  
     @Override public boolean equals(Object obj)
@@ -448,25 +446,25 @@ class Employee {
         if (getClass() != obj.getClass())
             return false;
  
-        Employee other = (Employee)obj;
+        Ansat anden = (Ansat)obj;
  
-        if (Id != other.Id)
+        if (Id != anden.Id)
             return false;
  
-        if (firstName == null) {
-            if (other.firstName != null)
+        if (fornavn == null) {
+            if (anden.fornavn != null)
                 return false;
         }
  
-        else if (!firstName.equals(other.firstName))
+        else if (!fornavn.equals(anden.fornavn))
             return false;
  
-        if (lastName == null) {
-            if (other.lastName != null)
+        if (efternavn == null) {
+            if (anden.efternavn != null)
                 return false;
         }
  
-        else if (!lastName.equals(other.lastName))
+        else if (!efternavn.equals(anden.efternavn))
             return false;
  
         return true;
@@ -478,16 +476,16 @@ class Employee {
 
 [source,java]
 ----
-public record Employee(int id, String firstName, String lastName) {}
+public record Ansat(int id, String fornavn, String efternavn) {}
 ----
 
-=== Conclusions
+=== Konklusioner
 
-Is Java still verbose?
+Er Java stadig omstændeligt?
 
-== Myth #3: Java is Hard to Use
+== Myte #3: Java er Svært at Bruge
 
-=== Todays enterprise Java
+=== Dagens enterprise Java
 
 Maven, Gradle...
 
@@ -505,37 +503,37 @@ include::docs/theend.adoc[]
 
 [.notes]
 --
-* Statement: "Java is Hard to Use"
-* Simplifying Java: Introduction to JBang
-* Trial and Error Session: JBang script
+* Udsagn: "Java er Svært at Bruge"
+* Forenkling af Java: Introduktion til JBang
+* Prøv og Fejl Session: JBang script
 --
 
-== Myth #4: Java is Slow
-
-[.notes]
---
-* Statement: "Java is Slow"
-* Java Performance Today: Quarkus and GraalVM
-* Demo: Starting a project with Quarkus
---
-
-== Break
+== Myte #4: Java er Langsomt
 
 [.notes]
 --
-* A short break
+* Udsagn: "Java er Langsomt"
+* Java Ydeevne I Dag: Quarkus og GraalVM
+* Demo: Starte et projekt med Quarkus
+--
+
+== Pause
+
+[.notes]
+--
+* En kort pause
 --
 
 == Hands-on Workshop
 
 [.notes]
 --
-* Workshop objectives
-* Group activity: Simple project/challenge
-* Experimentation and exploration
+* Workshop mål
+* Gruppeaktivitet: Simpelt projekt/udfordring
+* Eksperimentering og udforskning
 --
 
-== Q&A and Wrap-Up
+== Q&A og Afslutning
 [.notes]
 --
 * Open floor for questions
@@ -550,348 +548,5 @@ image::images/sprinklethem.png[]
 * https://quarkus.io/guides
 * https://
 
-
-[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
-== Starting Quarkus 3
-
-[%notitle]
-== Supersonic
-
-image::images/supersonic.png[background, size=cover]
-
-[%notitle]
-=== Subatomic
-
-image::images/subatomic.png[background, size=cover]
-
-[%notitle]
-=== Hot Java 
-:classic: The classic way
-
-image::images/hotjava.png[background]
-
-[.notes]
---
-That is a proper cake!
-
-Excellent performance,
-Ability to have super density
-- all somethig that make your devops team
-happy and especially the financial department
-and even better yet - your users can wait less if done right!
-
-And then the toppings are the awesome developer experience.
---
-
-[transition=fade]
-=== {classic}
-image::images/buildruntime-1.png[]
-
-[transition=none]
-=== {classic}
-
-image::images/buildruntime-2.png[]
-
-[transition=none]
-=== {classic}
-
-image::images/buildruntime-3.png[]
-
-[transition=none]
-=== {classic}
-
-image::images/buildruntime-4.png[]
-
-[transition=none]
-=== {classic}
-
-image::images/buildruntime-5.png[]
-
-[transition=none]
-=== The Quarkus Way
-
-image::images/buildruntime-6.png[]
-
-== Demo Time
-
-
-
-
-[%notitle,background-iframe="https://quarkus.io/blog/road-to-quarkus-3/"]
-== Back to starting Quarkus 3
-
-== Why Quarkus 3
-
-[%step]
-A foundation to do more!
-
-[%notitle]
-=== Quarkus 3
-
-image::images/quarkus3highlights.png[background, size=cover]
-
-=== Updating to Quarkus 3
-
-[%step]
-* `javax.*` packages are now in `jakarta.*`
-* reactive streams Flow to Java 9+ Flow API
-* Hibernate 5 to 6
-* ... and more
-
-[.notes]
-
-=== Updating to Quarkus 3
-
-* icon:heart[] `quarkus update --stream=3.0`
-* Powered by OpenRewrite (and Windup)
-
-[.notes]
---
-```bash
-git clone https://github.com/quarkusio/todo-demo-app
-quarkus dev
-quarkus update --stream=3.0
-hibernate_seq -> todo_seq
-```
---
-
-=== Why Update
-
-[.blackback]
-=== Jakarta EE 10
-
-image::images/lawyerdrivendevelopment.png[background]
-
-[%step]
-* Lawyer Driven Development
-* javax.* -> jakarta.*
-* Everybody is finally doing it!
-
-[transition=fade]
-[.blackback]
-=== Hibernate 6
-
-image::images/hackingonhibernate6.png[background]
-
-[transition=fade]
-=== Hibernate 6
-
-* Rewrites of internals to enable faster innovation
-
-[%step]
-* Lots of optimizations from Quarkus learnings
-* Removal of Deprecations
-* Hibernate Reactive 2
-* Tune in for https://www.youtube.com/watch?v=nXnxcl4v9eg&list=PLsM3ZE5tGAVatO65JIxgskQh-OKoqM4F2[Quarkus Insights #131]
-
-=== New Dev UI
-
-[%notitle]
-=== Dev UI
-
-image::https://quarkus.io/assets/images/posts/3.0.0.final/dev-ui.gif[background]
-
-[.notes]
-
-=== Quarkus CLI Plugins
-
-[%step]
-* Plugins can be ...
-    ** ...an executable (binary or script)
-    ** ...a jbang alias/script reference
-    ** ...a maven coordinates
-* Plugins come from...
-    ** ...`PATH`
-    ** ...JBang Catalogs
-    ** ...Quarkus Extensions
-
-[.notes]
-
-=== Management Port
-
-[%step]
-* Probably the most requested feature
-* `quarkus.management.enabled=true`
-* `http://<host>:9000/q/health|metrics|info|...`
-
-[.notes]
-=== /q/info
-
-[source,json]
-----
-{
-  "git" : {
-    "branch" : "master",
-    "commit" : {
-      "id" : "0d52564219c29e47f5f5878e8fd8e0d04329288b",
-      "time" : "2023-06-05T23:49:47+02:00"
-    }
-  },
-  "java" : {
-    "version" : "11.0.11"
-  },
-  "os" : {
-    "name" : "Mac OS X",
-    "version" : "11.3",
-    "arch" : "x86_64"
-  },
-  "build" : {
-    "group" : "io.quarkus.sample",
-    "artifact" : "todo-backend",
-    "version" : "1.0-SNAPSHOT",
-    "time" : "2023-06-06T00:02:26.692472+02:00"
-  }
-}
-----
-
-[%notitle,background-iframe="http://localhost:8080/q/dev-ui/io.quarkus.quarkus-info/information"]
-=== /q/info
-
-=== Migrations as Jobs
-
-Have a flyway or liquibase migration ?
-
-[%step]
-* Kubernetes Job auto-configured
-* Ensure migrations are run before app starts
-
-== Beyond 3.0
-
-* ...or at least some of it
-
-=== Long Term Support
-
-[%step]
-* How to release fast but still support ?
-* Red Hat Build of Quarkus
-    ** 1.11,2.7,2.13,3.2
-* Quarkus 3.2+ will be community LTS
-
-=== io_uring
-
-* Drastic io performance improvements
-* Requires recent Linux kernel (RHEL 9+)
-
-=== Virtual Threads
-
-[%step]
-* `@RunOnVirtualThread` since 2.10 (May 2022)
-* Balance between OpenJDK vs Java ecosystem benefits
-* Stay tuned...
-
-== Frontends 
-
-image::images/frontendrainbow.png[background]
-
-[%step]
-* Can we make them fun to develop ?
-* Can we support them all ?
-
-=== Quinoa
-
-* Use npm based frontend with Quarkus
-* Works with live-reload
-
-=== WebAssets
-
-* Use esbuild to bundle frontend assets
-
-=== Qute Server Pages
-
-* Direct serving of Qute from `resources` as pages
-* `src/main/resource/templates/*` -> `qsp/*`
-
-=== Renarde
-
-* Quarkus Web Framework
-* Serverside rendering using Qute
-
-[%notitle]
-=== Frontend Rainbow
-
-image::images/frontendrainbow.png[background]
-
-* Quinoa
-* Renarde
-* Qute Server Pages 
-* WebAssets
-
-
-
-[%notitle]
-== Quarkus All The Things
-
-image::images/quarkusallthethings.png[background, size=cover]
-
-== How Green is Quarkus?
-
-image::images/greenquarkus.png[]]
-
-[%notitle]
-=== Green Quarkus
-
-image::images/green-1.svg[background, size=cover]
-
-[%notitle]
-=== Green Quarkus
-
-image::images/green-2.svg[background, size=cover]
-
-[%notitle]
-=== Green Quarkus
-
-image::images/green-3.svg[background, size=cover]
-
-[%notitle]
-=== Green Quarkus
-
-image::images/green-4.svg[background, size=cover]
-
-[.columns]
-=== Does Quarkus reduce carbon emissions?
-
-[.column]
-image::images/greenquarkus.png[]
-
-[%step]
-[.column]
-====
-Quarkus saves +
-
-* Time
-* Money
-* Carbon (~2x)
-
-[%step]
-Native? +
-[%step]
-It depends
-====
-
-== Is Quarkus Secure? 
-
-[%step]
-YES!^*^
-
-[%notitle,background-iframe="https://quarkus.io/guides/security-architecture"]
-=== Security Architecture
-
-[%notitle,background-iframe="https://quarkus.io/guides/security-authentication"]
-
-[%notitle,background-iframe="https://quarkus.io/guides/security-openid-connect-providers"]
-=== OpenID Providers
-
-
-== Conclusion
-
-[%step]
-- Quarkus is supersonic and subatomic Java
-- Developers get to have joy
-- Operations gets resources
-- Quarkus 3 is easy to update to
-- Quarkus is green
-- Quarkus is secure
-- Quarkus 3 is a foundation for more
-- Try https://quarkus.io[quarkus.io]
 
 
