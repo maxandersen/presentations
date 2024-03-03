@@ -536,9 +536,9 @@ include::docs/theend.adoc[]
 == Q&A og Afslutning
 [.notes]
 --
-* Open floor for questions
-* Key takeaways summary
-* Further learning resources
+* Åben gulv for spørgsmål
+* Vigtige pointer opsummering
+* Yderligere læringsressourcer
 --
 
 == Links
