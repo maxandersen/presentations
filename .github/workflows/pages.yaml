@@ -5,6 +5,9 @@ on:
     branches:
       - '*' # matches every branch that doesn't contain a '/'
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
