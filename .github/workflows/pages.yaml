@@ -23,8 +23,12 @@ jobs:
       - name: Setup JBang
         uses: jbangdev/setup-jbang@main
 
-      #- name: Setup upterm session
-      #  uses: lhotari/action-upterm@v1
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
+
+      - name: Setup upterm session
+        if: github.event.inputs.debug == 'true'
+        uses: lhotari/action-upterm@v1
 
       - name: Build page 🔧
         run: ./index.adoc
@@ -33,4 +37,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.ref }}
+          publish_dir: .
+          destination_dir: ${{ github.ref }}
+          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.md,.gitignore,.git'
