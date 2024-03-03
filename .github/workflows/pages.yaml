@@ -18,8 +18,8 @@ jobs:
           submodules: true  # TODO remove this if not using submodules in Hexo
 
       - name: Setup JBang
-        uses: jbangdev/jbang-setup-action@v1
-        
+        uses: jbangdev/setup-jbang@main
+
       #- name: Setup upterm session
       #  uses: lhotari/action-upterm@v1
 
