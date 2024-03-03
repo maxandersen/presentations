@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - '*' # matches every branch that doesn't contain a '/'
-
+  workflow_dispatch:
+    
 permissions:
   contents: write
 
