@@ -21,8 +21,8 @@ $ ./myservice.java
 ./myservice.java
 [jbang] Resolving dependencies...
 [jbang] Artifacts used for dependency management:
-         io.quarkus:quarkus-bom:pom:1.11.0.Final
-[jbang] io.quarkus:quarkus-resteasy
+         io.quarkus:quarkus-bom:pom:3.8.1
+[jbang] io.quarkus:quarkus-resteasy-reactive
 Done
 [jbang] Dependencies resolved
 [jbang] Building jar...
@@ -45,16 +45,16 @@ __  ____  __  _____   ___  __ ____  ______
 [source,java]
 ----
 ///usr/bin/env jbang "$0" "$@" ; exit $?
-//DEPS io.quarkus:quarkus-bom:${quarkus.version:1.11.0.Final}@pom
+//DEPS io.quarkus:quarkus-bom:${quarkus.version:3.8.0}@pom
 //DEPS io.quarkus:quarkus-resteasy
 //JAVAC_OPTIONS -parameters
 //FILES resources/index.html=index.html
 //SOURCES **.java
 
 import io.quarkus.runtime.Quarkus;
-import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
 
 @Path("/hello")
 @ApplicationScoped
@@ -78,15 +78,6 @@ $ jbang org.jreleaser:jreleaser:1.0.0
 $ jbang https://github.com/jbangdev/jbang/../examples/inetTest.java
 $ jbang https://jbang.dev
 ----
-
-=== Sharing is Caring
-
-
-[%step]
-- `jbang-catalog` repository or `jbang-catalog.json`
-- Run aliases: `jbang env@jbangdev`, `jbang minecraft-server@microsoft`
-- Init templates: `jbang init -t githubapp@quarkusio myapp.java`
-- Browse on https://jbang.dev/appstore[jbang.dev/appstore]
 
 [background-iframe="https://www.jbang.dev/appstore/"]
 === JBang AppStore

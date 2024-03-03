@@ -5,22 +5,22 @@
 :revealjs_theme: black
 :customcss: css/custom.css
 :favicon: ./images/favicon.ico
-// bedre 
+// better 
 :title-slide-background-image: images/blackspace.png
 :slide-background-image: images/slide2-white.png
 :revealjs_fragmentInURL: true
 :revealjs_hash: true
 :revealjs_controls: true
-:revealjs_controlsLayout: kanter
+:revealjs_controlsLayout: edges
 :revealjs_controlsTutorial: true
 :revealjs_slideNumber: c/t
-:revealjs_showSlideNumber: taler
+:revealjs_showSlideNumber: speaker
 :revealjs_autoPlayMedia: true
 :revealjs_totalTime: 2700
 //:revealjs_parallaxBackgroundImage:  images/mntbackground.jpg
 //:revealjs_parallaxBackgroundSize: 4936px 2092px
 :source-highlighter: highlight.js
-// lad være tom eller vælg stil fra galleri på https://highlightjs.org/static/demo/ og find url på https://cdnjs.com/libraries/highlight.js
+// leave empty or pick style from gallery at https://highlightjs.org/static/demo/ and find url at https://cdnjs.com/libraries/highlight.js
 :highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/solarized-dark.min.css
 :revealjs_preloadIframes: true
 :icons: font
@@ -29,7 +29,7 @@ Erhvervsakademi Midtvest, Herning +
 @maxandersen +
 2024-03-05
 
-image:images/icons/redhat.png[rolle=ikon]
+image:images/icons/redhat.png[role=icon]
 
 [.notes]
 --
@@ -47,7 +47,21 @@ Bruger du Java?
 [%step]
 Er Java dødt?
 
-== Mig
+include::docs/myths.adoc[]
+
+== Mit Job
+
+Distinguished Engineer, Red Hat +
+Co-lead for Quarkus
+
+[transition=fade]
+=== Mit Job
+
+Diplomatic [.line-through]#Distinguished# Engineer +
+Co-lead for Quarkus
+
+=== Hvordan endte jeg her?
+image::images/redthread.webp[background, size=cover]
 
 * '94-'96 - Datamatiker i Ikast
 * '98-'00 - Datalog i Aalborg
@@ -70,20 +84,7 @@ Sideprojekter:: JBang, Home Assistant, ...
 
 Top Programmeringssprog:: Java, Python 
 
-=== Mit Hovedjob
-
-Fremtrædende Ingeniør
-
-[transition=fade]
-==== Mit Hovedjob
-
-Diplomatisk [.line-through]#Fremtrædende# Ingeniør
-
-
-
-[%notitle]
-== Mythbusting!
-image::images/mythbusting.webp[background]
+include::docs/myths.adoc[]
 
 
 == Myte #1: Ingen bruger Java!
@@ -98,12 +99,12 @@ image::images/mythbusting.webp[background]
 [%notitle]
 === Netflix 
 
-"Hver backend hos ??? er i bund og grund en Java app....2800 Java applikationer...mikroservices af forskellige størrelser....1500 interne biblioteker" - Februar ????
+"Every backend at ??? is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February ????
 
 [%notitle]
 === Netflix afsløring
 
-"Hver backend hos Netflix er i bund og grund en Java app....2800 Java applikationer...mikroservices af forskellige størrelser....1500 interne biblioteker" - Februar 2024
+"Every backend at Netflix is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February 2024
 
 image::images/netflixjava.png[]
 
@@ -111,18 +112,33 @@ https://www.infoq.com/presentations/netflix-java/
 
 === De Store ?
 
-Microsoft, Amazon, Google, Twitter, LinkedIn, ..
+[%step]
+Microsoft, Amazon, Google, Twitter, LinkedIn, NASDAQ ..
 
 === Hvad med Startups ? 
 
+[%step]
 Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda, Uber, Airbnb, ...
 
-=== Danmark
+=== Danmark ?
 
-Danske Bank, Maersk, Systematic, Netcompany, Trifork, LEGO, Bang & Olufsen, KMD, DSB, Rejseplanen, BankData, JYSK, ...
+[%step]
+Danske Bank, Maersk, Systematic, Netcompany, Trifork, LEGO, Bang & Olufsen, KMD, DSB, Rejseplanen, BankData, JYSK, TDC, Yousee,
+3, Maersk, Grundfoss, Orested, Danfoss,Norlys,Skat og andre ministerier, Region Midt/Hoved, Schneider electric, ...
 
-=== Sprogudvikling
+=== Hvad med Python? C#? Go? Rust? JavaScript?
 
+* Java er brugt a https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/[30% af alle udviklere]
+* Java er #2 efter Python i https://pypl.github.io/PYPL.html[PYPL] og #4 efter Python/C/C++ i https://www.tiobe.com/tiobe-index/[TIOBE]
+* https://blogs.oracle.com/java/post/java-recognized-as-the-favorite-programming-language[69% af fuldtids udviklere] globalt
+* https://stratoflow.com/why-is-java-so-popular/["Java’s market share was over 31% in 2008 and has decreased to 15.81% in 2023']
+
+=== Myte #1: Ingen bruger Java!
+
+Conclusion?
+
+[%step]
+image::images/mythbusted.png[]
 
 == Myte #2: Java er Omstændeligt
 
@@ -134,71 +150,47 @@ Danske Bank, Maersk, Systematic, Netcompany, Trifork, LEGO, Bang & Olufsen, KMD,
 --
 
 [transition=fade]
-=== Java Hej Verden
+=== Java Hello World
 
 [source,java]
 ----
 public class HelloWorld {
   public static void main(String[] args) {
-    System.out.println("Hej, Verden");
+    System.out.println("Hello, World");
   }
 }
 ----
 
 [transition=fade]
-=== Java 21 Hej Verden
+=== Java 21 Hello World
 
 [source,java]
 ----
 void main() {
-  System.out.println("Hej, Verden");
+  System.out.println("Hello, World");
 }
 ----
 
 [transition=fade]
-=== Java 22 Hej Verden
+=== Java 22 Hello World
 
 [source,java]
 ----
 void main() {
-  println("Hej, Verden");
+  println("Hello, World");
 }
 ----
 
-=== Pre-Java 5: Fil I/O
+=== Java Release Cadence
 
-[source,java]
-----
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+image::images/javaversionhistory.png[]
 
-public class ReadFileJava6 {
-    public static void main(String[] args) {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader("eksempel.txt"));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-}
-----
+include::docs/java5.adoc[]
 
-=== Java 5: statisk import
+[transition=fade]
+=== Java 7: try-with-resources
 
+[.stretch]
 [source,java]
 ----
 import java.io.BufferedReader;
@@ -206,43 +198,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import static java.lang.System.out;
 
-public class ReadFileJava6 {
+public class ReadFile {
     public static void main(String[] args) {
-        BufferedReader reader = null;
-        try {
-            reader = new BufferedReader(new FileReader("eksempel.txt"));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (reader != null) {
-                try {
-                    reader.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-}
-----
-
-[transition=fade]
-=== Java 7: try-med-ressourcer
-
-[source,java]
-----
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import static java.lang.System.out;
-
-public class ReadFileJava7 {
-    public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("eksempel.txt"))) {
+        try (BufferedReader reader = new BufferedReader(
+                new FileReader("example.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 out.println(line);
@@ -265,9 +224,9 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 import static java.lang.System.out;
 
-public class ReadFileJava8 {
+public class ReadFile {
     public static void main(String[] args) {
-        try (Stream<String> stream = lines(Paths.get("eksempel.txt"))) {
+        try (Stream<String> stream = lines(Paths.get("example.txt"))) {
             stream.forEach(out::println);
         } catch (IOException e) {
             e.printStackTrace();
@@ -287,9 +246,9 @@ import java.nio.file.Paths;
 import java.util.stream.Stream;
 import static java.lang.System.out;
 
-public class ReadFileJava8 {
+public class ReadFile {
     public static void main(String[] args) {
-        try (var stream = lines(Paths.get("eksempel.txt"))) {
+        try (var stream = lines(Paths.get("example.txt"))) {
             stream.forEach(out::println);
         } catch (IOException e) {
             e.printStackTrace();
@@ -298,6 +257,7 @@ public class ReadFileJava8 {
 }
 ----
 
+[transition=fade]
 === Java 11: readString
 
 [source,java]
@@ -308,11 +268,11 @@ import java.nio.file.Path;
 import static java.nio.file.Files.readString;
 import static java.lang.System.out;
 
-public class ReadFileJava11 {
+public class ReadFile {
     public static void main(String[] args) {
         try {
-            var indhold = readString(Path.of("eksempel.txt"));
-            out.println(indhold);
+            var content = readString(Path.of("example.txt"));
+            out.println(content);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -320,7 +280,8 @@ public class ReadFileJava11 {
 }
 ----
 
-=== Java 21: unavngivet klasse
+[transition=fade]
+=== Java 21: unnamed class
 
 [source,java]
 ----
@@ -331,14 +292,33 @@ import static java.lang.System.out;
 
 void main(String[] args) {
     try {
-        out.println(readString(of("eksempel.txt")));
+        out.println(readString(of("example.txt")));
     } catch (IOException e) {
         e.printStackTrace();
     }
 }
 ----
 
-=== Bemærkelsesværdige andre
+[transition=fade]
+=== Java 22?: default imports
+
+[source,java]
+----
+import static java.nio.file.Path.of;
+import static java.nio.file.Files.readString;
+
+void main(String[] args) {
+    try {
+        println(readString(of("example.txt")));
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+----
+
+include::docs/java5.adoc[]
+
+=== Notable others
 
 === Java: Strenge
 
@@ -353,7 +333,7 @@ String indhold = "Hej " + navn + ",\n\n" +
 ----
 
 [transition=fade]
-=== Java 17 & 21: Tekstblokke & Skabeloner
+=== Java 17 & 21: Text Blocks & Templates
 
 [source,java]
 ----
@@ -370,39 +350,40 @@ String indhold = STR."""
 ----
 
 [transition=fade]
-=== Dataklasser
+=== Data Classes
 
+[.stretch]
 [source,java,linenums]
 ----
-class Ansat {
+class Employee {
  
-    private String fornavn;
-    private String efternavn;
+    private String firstName;
+    private String lastName;
     private int Id;
  
-    public Ansat(String fornavn, String efternavn,
+    public Employee(String firstName, String lastName,
                     int Id)
     {
  
-        this.fornavn = fornavn;
-        this.efternavn = efternavn;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.Id = Id;
     }
  
-    public void setFornavn(String fornavn)
+    public void setFirstName(String firstName)
     {
-        this.fornavn = fornavn;
+        this.firstName = firstName;
     }
  
-    public String getFornavn() { return fornavn; }
+    public String getFirstName() { return firstName; }
  
-    public void setEfternavn(String efternavn)
+    public void setLastName(String lasstName)
     {
  
-        this.efternavn = efternavn;
+        this.lastName = lastName;
     }
  
-    public String getEfternavn() { return efternavn; }
+    public String getLastName() { return lastName; }
  
     public void setId(int Id) { this.Id = Id; }
  
@@ -411,27 +392,27 @@ class Ansat {
     public String toString()
     {
  
-        return "Ansat [fornavn=" + fornavn
-            + ", efternavn=" + efternavn + ", Id=" + Id + "]";
+        return "Employee [firstName=" + firstName
+            + ", lastName=" + lastName + ", Id=" + Id + "]";
     }
  
     @Override public int hashCode()
     {
  
-        final int prim = 31;
-        int resultat = 1;
+        final int prime = 31;
+        int result = 1;
  
-        resultat = prim * resultat + Id;
-        resultat = prim * resultat
-                 + ((fornavn == null)
+        result = prime * result + Id;
+        result = prime * result
+                 + ((firstName == null)
                         ? 0
-                        : fornavn.hashCode());
-        resultat
-            = prim * resultat
-              + ((efternavn == null) ? 0
-                                    : efternavn.hashCode());
+                        : firstName.hashCode());
+        result
+            = prime * result
+              + ((lastName == null) ? 0
+                                    : lastName.hashCode());
  
-        return resultat;
+        return result;
     }
  
     @Override public boolean equals(Object obj)
@@ -446,25 +427,25 @@ class Ansat {
         if (getClass() != obj.getClass())
             return false;
  
-        Ansat anden = (Ansat)obj;
+        Employee other = (Employee)obj;
  
-        if (Id != anden.Id)
+        if (Id != other.Id)
             return false;
  
-        if (fornavn == null) {
-            if (anden.fornavn != null)
+        if (firstName == null) {
+            if (other.firstName != null)
                 return false;
         }
  
-        else if (!fornavn.equals(anden.fornavn))
+        else if (!firstName.equals(other.firstName))
             return false;
  
-        if (efternavn == null) {
-            if (anden.efternavn != null)
+        if (lastName == null) {
+            if (other.lastName != null)
                 return false;
         }
  
-        else if (!efternavn.equals(anden.efternavn))
+        else if (!lastName.equals(other.lastName))
             return false;
  
         return true;
@@ -474,14 +455,24 @@ class Ansat {
 
 === Java 14: Records
 
-[source,java]
+[source,java,linenums]
 ----
-public record Ansat(int id, String fornavn, String efternavn) {}
+public record Employee(int id, 
+                       String firstName, 
+                       String lastName) {}
 ----
 
-=== Konklusioner
+=== Hvad er der sket?
 
-Er Java stadig omstændeligt?
+* 30 års "bagage" som verdens mest populære sprog
+* Skoler/Universiteter opdaterer ikke hvad der virker
+
+=== Myte #2: Java er Omstændeligt?
+
+Conclusion?
+
+[%step]
+image::images/mythbusted.png[]
 
 == Myte #3: Java er Svært at Bruge
 
@@ -501,6 +492,15 @@ include::docs/beyondgettingstarted.adoc[]
 
 include::docs/theend.adoc[]
 
+=== JBang *is* Java
+
+=== Myte #3: Java er Svært at Bruge?
+
+Conclusion?
+
+[%step]
+image::images/mythbusted.png[]
+
 [.notes]
 --
 * Udsagn: "Java er Svært at Bruge"
@@ -508,7 +508,7 @@ include::docs/theend.adoc[]
 * Prøv og Fejl Session: JBang script
 --
 
-== Myte #4: Java er Langsomt
+== Myth #4: Java er Langsomt
 
 [.notes]
 --
@@ -517,6 +517,40 @@ include::docs/theend.adoc[]
 * Demo: Starte et projekt med Quarkus
 --
 
+=== 1️⃣🐝🏎️ 
+
+[%step]
+The https://www.morling.dev/blog/one-billion-row-challenge/[One Billion Row] Challenge
+
+[%step]
+image::images/1brc.png[]
+
+=== 1️⃣🐝🏎️ Results
+
+[%step]
+Baseline: 4m 49s
+
+[%step]
+Result: 1.5s
+
+[%step]
+192x faster 
+
+=== Hvordan? 
+
+[%step]
+* Minimer IO
+* Divde & Conquer
+* Udnyt CPU arkitektur
+* Optimeret hukommelse (unsafe())
+* GraalVM native binary
+
+=== Tidens trend
+
+* Build Time vs Run Time
+* Quarkus, Micronaut, Helidon, Spring Boot, ...
+
+=== 
 == Pause
 
 [.notes]
@@ -526,6 +560,8 @@ include::docs/theend.adoc[]
 
 == Hands-on Workshop
 
+* Installer JBang (https://jbang.dev/download)
+* 
 [.notes]
 --
 * Workshop mål
@@ -536,9 +572,9 @@ include::docs/theend.adoc[]
 == Q&A og Afslutning
 [.notes]
 --
-* Åben gulv for spørgsmål
-* Vigtige pointer opsummering
-* Yderligere læringsressourcer
+* Open floor for questions
+* Key takeaways summary
+* Further learning resources
 --
 
 == Links
