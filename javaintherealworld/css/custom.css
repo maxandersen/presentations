@@ -1,0 +1,17 @@
+@import 'https://fonts.googleapis.com/css?family=Kalam';
+
+section.blackback :is(h1,h2,div) {
+    /*background-color: black;*/
+    color: white;
+}
+  
+/* font example */
+section.title :is(h1,h2,div) {
+  font-family: 'Kalam';
+}
+
+.transparent-img {
+  opacity: 0.5; /* adjust this to the desired opacity level; 0 is fully transparent, 1 is fully opaque */
+}
+
+.line-through{text-decoration:line-through}
