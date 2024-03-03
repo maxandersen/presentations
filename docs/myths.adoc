@@ -1,0 +1,14 @@
+[%notitle]
+== Mythbusting!
+image::images/mythbusting.webp[background]
+
+=== Myths
+
+[%step]
+Ingen bruger Java!
+[%step]
+Java er omstændeligt!
+[%step]
+Java er svært at bruge!
+[%step]
+Java er langsomt!
