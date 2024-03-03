@@ -5,9 +5,13 @@ on:
     branches:
       - '*' # matches every branch that doesn't contain a '/'
   workflow_dispatch:
-    
+
 permissions:
   contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -34,7 +38,6 @@ jobs:
       - name: Build page 🔧
         run: ./index.adoc
 
-
       - name: Extract Branch
         uses: nelonoel/branch-name@v1.0.1
 
@@ -44,4 +47,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           destination_dir: ${{ env.BRANCH_NAME }}
-          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.md,.gitignore,.git'
+          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.adoc,README.md,.gitignore,.git'
