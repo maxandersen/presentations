@@ -1,6 +1,6 @@
 //usr/bin/env command -v jbang >/dev/null 2>&1 || curl -Ls https://sh.jbang.dev | bash -s app setup && exec `$SHELL -c "which jbang"` adoc2reveal.java "$0" "$@" ; exit $?
 [.blackback]
-= 30 år!
+= "The Real World"
 :date: 2024-03-05
 :revealjs_theme: black
 :customcss: css/custom.css
@@ -16,7 +16,7 @@
 :revealjs_slideNumber: c/t
 :revealjs_showSlideNumber: speaker
 :revealjs_autoPlayMedia: true
-:revealjs_totalTime: 2700
+:revealjs_totalTime: 3600
 //:revealjs_parallaxBackgroundImage:  images/mntbackground.jpg
 //:revealjs_parallaxBackgroundSize: 4936px 2092px
 :source-highlighter: highlight.js
@@ -49,17 +49,6 @@ Er Java dødt?
 
 include::docs/myths.adoc[]
 
-== Mit Job
-
-Distinguished Engineer, Red Hat +
-Co-lead for Quarkus
-
-[transition=fade]
-=== Mit Job
-
-Diplomatic [.line-through]#Distinguished# Engineer +
-Co-lead for Quarkus
-
 === Hvordan endte jeg her?
 image::images/redthread.webp[background, size=cover]
 
@@ -75,7 +64,7 @@ image::images/adaptabledinosaur.webp[]
 
 [%notitle]
 === Mig 2
-
+    
 Bidraget til:: Hibernate, JBoss AS/WildFly, JBoss Tools, Eclipse, Ceylon, OpenShift, Quarkus, ...
 
 Arbejdet tæt sammen med:: OpenJDK, GraalVM, Apache Camel, vert.x, KeyCloak, Microsoft VSCode, JetBrains, Docker, ...
@@ -123,8 +112,8 @@ Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda, Uber, Airbnb, ...
 === Danmark ?
 
 [%step]
-Danske Bank, Maersk, Systematic, Netcompany, Trifork, LEGO, Bang & Olufsen, KMD, DSB, Rejseplanen, BankData, JYSK, TDC, Yousee,
-3, Maersk, Grundfoss, Orested, Danfoss,Norlys,Skat og andre ministerier, Region Midt/Hoved, Schneider electric, ...
+Danske Bank, Maersk, [.step.highlight-red]#Systematic#, Netcompany, Trifork, [.step.highlight-red]#LEGO#, Bang & Olufsen, KMD, DSB, Rejseplanen, BankData, [.step.highlight-red]#JYSK#, TDC, Yousee,
+3, Maersk, Grundfoss, Orested, Danfoss,Norlys,Skat og andre ministerier, [.step.highlight-red]#Region Midt/Hoved#, Schneider electric, ...
 
 === Hvad med Python? C#? Go? Rust? JavaScript?
 
@@ -140,7 +129,104 @@ Conclusion?
 [%step]
 image::images/mythbusted.png[]
 
-== Myte #2: Java er Omstændeligt
+
+== Myth #2: Java er Langsomt
+
+[.notes]
+--
+* Udsagn: "Java er Langsomt"
+* Java Ydeevne I Dag: Quarkus og GraalVM
+* Demo: Starte et projekt med Quarkus
+--
+
+=== 1️⃣🐝🏎️ 
+
+[%step]
+The https://www.morling.dev/blog/one-billion-row-challenge/[One Billion Row] Challenge
+
+[%step]
+image::images/1brc.png[]
+
+=== 1️⃣🐝🏎️ Results
+
+[%step]
+Baseline: 4m 49s
+
+[%step]
+Result: 1.5s
+
+[%step]
+192x faster 
+
+=== Hvordan? 
+
+[%step]
+* Minimer IO
+* Divde & Conquer
+* Udnyt CPU arkitektur
+* Optimeret hukommelse (unsafe())
+* GraalVM native binary
+
+=== Tidens trend
+
+* Build Time vs Run Time
+* JavaVM vs Native Image
+* Quarkus, Micronaut, Helidon, Spring Boot, ...
+
+[%notitle]
+=== Supersonic
+
+image::images/supersonic.png[background, size=cover]
+
+[%notitle]
+=== Subatomic
+
+image::images/subatomic.png[background, size=cover]
+
+[%notitle]
+=== Hot Java 
+:classic: The classic way
+
+image::images/hotjava.png[background]
+
+
+[transition=fade]
+=== {classic}
+image::images/buildruntime-1.png[]
+
+[transition=none]
+=== {classic}
+
+image::images/buildruntime-2.png[]
+
+[transition=none]
+=== {classic}
+
+image::images/buildruntime-3.png[]
+
+[transition=none]
+=== {classic}
+
+image::images/buildruntime-4.png[]
+
+[transition=none]
+=== {classic}
+
+image::images/buildruntime-5.png[]
+
+[transition=none]
+=== The Quarkus Way
+
+image::images/buildruntime-6.png[]
+
+=== Myte #2: Java er Langsomt?
+
+Conclusion?
+
+[%step]
+image::images/mythbusted.png[]
+
+== Myte #3: Java er Omstændeligt
 
 [.notes]
 --
@@ -462,23 +548,26 @@ public record Employee(int id,
                        String lastName) {}
 ----
 
-=== Hvad er der sket?
+=== Hvad er der sket? 
 
 * 30 års "bagage" som verdens mest populære sprog
 * Skoler/Universiteter opdaterer ikke hvad der virker
 
-=== Myte #2: Java er Omstændeligt?
+=== Myte #3: Java er Omstændeligt?
 
 Conclusion?
 
 [%step]
 image::images/mythbusted.png[]
 
-== Myte #3: Java er Svært at Bruge
+== Myte #4: Java er Svært at Bruge
 
 === Dagens enterprise Java
 
-Maven, Gradle...
+* javac, java, jar, war, ear, ...
+* Maven/Gradle ?
+* JavaEE/Jakarta & Spring Boot ?
+* IntelliJ/Eclipse/VSCode ?
 
 include::docs/gettingstarted.adoc[]
 
@@ -494,7 +583,11 @@ include::docs/theend.adoc[]
 
 === JBang *is* Java
 
-=== Myte #3: Java er Svært at Bruge?
+=== Hvad med Enterprise Java?
+
+* Quarkus demo
+
+=== Myte #4: Java er Svært at Bruge?
 
 Conclusion?
 
@@ -508,49 +601,7 @@ image::images/mythbusted.png[]
 * Prøv og Fejl Session: JBang script
 --
 
-== Myth #4: Java er Langsomt
-
-[.notes]
---
-* Udsagn: "Java er Langsomt"
-* Java Ydeevne I Dag: Quarkus og GraalVM
-* Demo: Starte et projekt med Quarkus
---
-
-=== 1️⃣🐝🏎️ 
-
-[%step]
-The https://www.morling.dev/blog/one-billion-row-challenge/[One Billion Row] Challenge
-
-[%step]
-image::images/1brc.png[]
-
-=== 1️⃣🐝🏎️ Results
-
-[%step]
-Baseline: 4m 49s
-
-[%step]
-Result: 1.5s
-
-[%step]
-192x faster 
-
-=== Hvordan? 
-
-[%step]
-* Minimer IO
-* Divde & Conquer
-* Udnyt CPU arkitektur
-* Optimeret hukommelse (unsafe())
-* GraalVM native binary
-
-=== Tidens trend
-
-* Build Time vs Run Time
-* Quarkus, Micronaut, Helidon, Spring Boot, ...
-
-=== 
+ 
 == Pause
 
 [.notes]
@@ -558,10 +609,19 @@ Result: 1.5s
 * En kort pause
 --
 
-== Hands-on Workshop
+== Hands-on
 
-* Installer JBang (https://jbang.dev/download)
-* 
+* Basic: Lav dit eget JBang/Java script
+** Prøv JBang (https://jbang.dev/download)
+*** `jbang init -t cli hello.java`
+*** `jbang init -t qrest rest.java`
+** Less Basic: Quarkus (næste slide)
+
+== Hands-on beyond basics 
+* Less Basic: Start et Quarkus projekt (https://quarkus.io/get-started/)
+** Advanced: ChatGPT m/Quarkus
+*** https://www.javaadvent.com/2023/12/scripting-quarkus-ai-with-large-language-models.html[Artikel] og https://github.com/maxandersen/javaadvent-2023-quarkus-ai-scripting/blob/main/devhelper.java[Kode]
+
 [.notes]
 --
 * Workshop mål

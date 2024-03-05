@@ -1,4 +1,4 @@
-== What is hard about getting started with Java ?
+=== What is hard about getting started with Java ?
 
 === reddit/learnjava
 

@@ -2,6 +2,8 @@
 
 Presentations by Max Andersen. Each presentation is archived in separate branches.
 
+This specific one is rendered at https://maxandersen.github.io/presentations/javaintherealworld/
+
 The presentations are done using asciidoctor + reveal.js and the whole thing is wired up with a link:src/docs/adoc2reveal.java[JBang script].
 
 The advantage is that you need zero installation and setup for this. No Java, Maven, Ruby, Gems etc. setup. All done and in isolated and in a reproducible manner.

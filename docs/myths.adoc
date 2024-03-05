@@ -5,10 +5,9 @@ image::images/mythbusting.webp[background]
 === Myths
 
 [%step]
-Ingen bruger Java!
-[%step]
-Java er omstændeligt!
-[%step]
-Java er svært at bruge!
-[%step]
-Java er langsomt!
+--
+1. Ingen bruger Java!
+2. Java er langsomt!
+3. Java er omstændeligt!
+4. Java er svært at bruge!
+--
