@@ -31,6 +31,9 @@ Erhvervsakademi Midtvest, Herning +
 
 image:images/icons/redhat.png[role=icon]
 
+link:https://maxandersen.github.io/presentations/javaintherealworld/#/_hands_on[Hands-on Lab]
+
+
 [.notes]
 --
 * Velkommen og kort introduktion
@@ -623,6 +626,7 @@ image::images/mythbusted.png[]
 
 == Hands-on
 
+* Se: https://bit.ly/javaintherealworld[bit.ly/javaintherealworld]
 * Basic: Lav dit eget JBang/Java script
 ** Prøv JBang (https://jbang.dev/download)
 *** `jbang init -t cli hello.java`
@@ -630,6 +634,8 @@ image::images/mythbusted.png[]
 ** Less Basic: Quarkus (næste slide)
 
 == Hands-on beyond basics 
+
+* Se: https://bit.ly/javaintherealworld[bit.ly/javaintherealworld]
 * Less Basic: Start et Quarkus projekt (https://quarkus.io/get-started/)
 ** Advanced: ChatGPT m/Quarkus
 *** https://www.javaadvent.com/2023/12/scripting-quarkus-ai-with-large-language-models.html[Artikel] og https://github.com/maxandersen/javaadvent-2023-quarkus-ai-scripting/blob/main/devhelper.java[Kode]
@@ -662,7 +668,7 @@ image::images/sprinklethem.png[]
 * https://quarkus.io/guides[quarkus.io/guides]
 * https://twitter.com/maxandersen[@maxandersen]
 * link:mailto://manderse@redhat.com[manderse@redhat.com]
-* https://bit.ly/javaitheealworld[bit.ly/javaintheealworld]
+* https://bit.ly/javaintherealworld[bit.ly/javaintherealworld]
 
 [.notes]
 
