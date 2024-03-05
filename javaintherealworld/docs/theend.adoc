@@ -1,4 +1,4 @@
-== Conclusion
+=== Conclusion
 
 [%step]
 - JBang is the best way to Get started with Java

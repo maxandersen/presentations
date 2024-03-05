@@ -1,4 +1,4 @@
-== Debugging
+=== Debugging
 
 === The JBang Way
 
