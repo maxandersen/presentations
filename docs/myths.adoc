@@ -1,8 +1,4 @@
-[%notitle]
-== Mythbusting!
-image::images/mythbusting.webp[background]
-
-=== Myths
+=== Myths eller ?
 
 [%step]
 --

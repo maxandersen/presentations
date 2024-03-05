@@ -40,7 +40,7 @@ IntelliJ
 image:images/intellij.png[width="150%"]
 
 [.column]
-Eclipse and Visual Studio Code In progress
+Eclipse and Visual Studio Code too!
 
 
 

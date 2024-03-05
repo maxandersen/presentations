@@ -50,7 +50,7 @@ Er Java dødt?
 include::docs/myths.adoc[]
 
 === Hvordan endte jeg her?
-image::images/redthread.webp[background, size=cover]
+//image::images/redthread.webp[background, size=cover]
 
 * '94-'96 - Datamatiker i Ikast
 * '98-'00 - Datalog i Aalborg
@@ -88,7 +88,7 @@ include::docs/myths.adoc[]
 [%notitle]
 === Netflix 
 
-"Every backend at ??? is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February ????
+"Every backend at ??? is basically a Java app....2800 Java applications...microservices of a variety of sizes....1500 internal libraries" - February 2024
 
 [%notitle]
 === Netflix afsløring
@@ -99,15 +99,15 @@ image::images/netflixjava.png[]
 
 https://www.infoq.com/presentations/netflix-java/
 
-=== De Store ?
+=== Andre Store ?
 
 [%step]
-Microsoft, Amazon, Google, Twitter, LinkedIn, NASDAQ ..
+Microsoft, Amazon, Google, Twitter, LinkedIn, NASDAQ, Red Hat & IBM ...
 
 === Hvad med Startups ? 
 
 [%step]
-Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda, Uber, Airbnb, ...
+Spotify, Slack, Lyft, DoorDash, Instagram, BitPanda, Uber, Airbnb, ...[.step.highlight-red]#real-time financial trading#!
 
 === Danmark ?
 
@@ -117,10 +117,22 @@ Danske Bank, Maersk, [.step.highlight-red]#Systematic#, Netcompany, Trifork, [.s
 
 === Hvad med Python? C#? Go? Rust? JavaScript?
 
+[%step]
+* Python - DataScience
+* Go/Rust - System/cloud-native
+* JavaScript - Frontend
+* C# - Windows/Backend
+* Java - Backend/Enterprise
+
+=== Hvad siger Data ?
+
+[%step]
+--
 * Java er brugt a https://www.statista.com/statistics/793628/worldwide-developer-survey-most-used-languages/[30% af alle udviklere]
 * Java er #2 efter Python i https://pypl.github.io/PYPL.html[PYPL] og #4 efter Python/C/C++ i https://www.tiobe.com/tiobe-index/[TIOBE]
 * https://blogs.oracle.com/java/post/java-recognized-as-the-favorite-programming-language[69% af fuldtids udviklere] globalt
 * https://stratoflow.com/why-is-java-so-popular/["Java’s market share was over 31% in 2008 and has decreased to 15.81% in 2023']
+--
 
 === Myte #1: Ingen bruger Java!
 
@@ -258,7 +270,7 @@ void main() {
 ----
 
 [transition=fade]
-=== Java 22 Hello World
+=== Java 22(?) Hello World
 
 [source,java]
 ----
@@ -376,7 +388,7 @@ import static java.nio.file.Path.of;
 import static java.nio.file.Files.readString;
 import static java.lang.System.out;
 
-void main(String[] args) {
+void main() {
     try {
         out.println(readString(of("example.txt")));
     } catch (IOException e) {
@@ -393,7 +405,7 @@ void main(String[] args) {
 import static java.nio.file.Path.of;
 import static java.nio.file.Files.readString;
 
-void main(String[] args) {
+void main() {
     try {
         println(readString(of("example.txt")));
     } catch (IOException e) {
@@ -630,6 +642,12 @@ image::images/mythbusted.png[]
 --
 
 == Q&A og Afslutning
+
+[%step]
+* Java forbliver relevant, effektiv, moderne og brugervenlig
+* Det er helt i orden at udforske andet, men...
+* Undervurder ikke Java's potentiale ;)
+
 [.notes]
 --
 * Open floor for questions
@@ -640,9 +658,13 @@ image::images/mythbusted.png[]
 == Links
 image::images/sprinklethem.png[]
 
-* https://jbang.dev/download
-* https://quarkus.io/guides
-* https://
+* https://jbang.dev/download[jbang.dev/download]
+* https://quarkus.io/guides[quarkus.io/guides]
+* https://twitter.com/maxandersen[@maxandersen]
+* link:mailto://manderse@redhat.com[manderse@redhat.com]
+* https://bit.ly/javaitheealworld[bit.ly/javaintheealworld]
+
+[.notes]
 
 
 
