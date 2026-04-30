@@ -10,8 +10,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "pages-${{ github.ref_name }}"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Build page
         run: |
-          if [ -f adoc2reveal.java ]; then
+          if [ -f adoc2reveal.java ] && [ -f index.adoc ]; then
             ./index.adoc
           else
             jbang lazyslide@maxandersen/lazyslide render slides
