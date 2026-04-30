@@ -37,6 +37,7 @@ jobs:
           if [ -f adoc2reveal.java ] && [ -f index.adoc ]; then
             ./index.adoc
           else
+            jbang trust add https://github.com/maxandersen/lazyslide/
             jbang lazyslide@maxandersen/lazyslide render slides
           fi
 
