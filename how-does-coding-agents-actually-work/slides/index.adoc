@@ -14,11 +14,14 @@
 :revealjs_transitionSpeed: fast
 :revealjs_hash: true
 :revealjs_history: true
+:revealjs_totalTime: 900
 // :revealjs_showNotes: true
 
+[data-timing=30]
 == Max who?
 
 * 🇩🇰 Danish — 17 years abroad (Switzerland → JBoss → Red Hat → IBM) — *back home since 2022*
+* Red Hat Distinguished Engineer, STSM @ IBM
 * 20+ years building developer tools (Quarkus, JBang, Hibernate, ...)
 * Building with AI/LLM coding since 2023 (ChatGPT API)
 * Reconnecting with the local dev community — glad to be here!
@@ -27,6 +30,7 @@
 // SECTION 1: INTRO (~2 min)
 // ============================================================
 
+[data-timing=45]
 == The Camps
 
 [%step]
@@ -45,6 +49,7 @@ Let me demystify the magic.
 // SECTION 2: BEHIND THE CURTAIN (~2 min)
 // ============================================================
 
+[data-timing=45]
 === Claude Code: impressive, but...
 
 [%step]
@@ -63,8 +68,10 @@ image::claude-code-machine.svg[width=50%]
 * All useful — *none of it is magic*
 --
 
+[data-timing=5]
 == The four building blocks
 
+[data-timing=45]
 === Every coding agent is just:
 
 [%step]
@@ -78,6 +85,7 @@ image::claude-code-machine.svg[width=50%]
 [%step]
 That's it. No magic. Let me show you.
 
+[data-timing=45]
 === The agentic loop
 
 [source,python]
@@ -95,6 +103,7 @@ while not done:
 ----
 nanocode: 271 lines of https://github.com/1rgs/nanocode[python] 261 lines of https://github.com/maxandersen/nanocode[java]
 
+[data-timing=240]
 === Proof: https://pi.dev[pi.dev]
 
 [%step]
@@ -118,8 +127,10 @@ Demo plan (~4 min):
 3. Show AGENTS.md as project context (1 min)
 --
 
+[data-timing=5]
 == What you need to know
 
+[data-timing=45]
 === Skills: extend with prose + code
 
 [source,markdown]
@@ -142,12 +153,14 @@ Use when user says "review this" or shares a PR.
 * Works with any model — it's just prompt text
 * All relevant coding agents support it
 
+[data-timing=20]
 === Beyond Skills
 
 * Ask pi/claude to write a skill or extension for you
 * Install extensions from https://skills.sh
 * Install extensions from https://pi.dev/packages
 
+[data-timing=45]
 === Context window = working memory
 
 [%step]
@@ -162,6 +175,7 @@ Use when user says "review this" or shares a PR.
 [.lead]
 Keep tasks focused. Start fresh often.
 
+[data-timing=45]
 === Why agents hallucinate
 
 [%step]
@@ -187,23 +201,26 @@ Because that's roughly what happened.
 // SECTION 6: TAKE HOME (~2 min)
 // ============================================================
 
+[data-timing=5]
 == Take home
 
+[data-timing=45]
 === Patterns that work
 
 [%step]
 * *Seeing is believing* - don't just read about it, try it out!
-* *Small tasks* — "add input validation" not "rewrite auth"
+* *Use it for boring stuff* — boilerplate, check plans, tests, migrations, docs, regex
+* *Small tasks* — "add input validation to page x" not "rewrite auth"
 * *Give context* — you know what the model doesn't, treat it as a new hire
-* *Project rules* — `CLAUDE.md` / `AGENTS.md` = cheapest quality boost
+* *Project rules* — `CLAUDE.md` / `AGENTS.md` when needed = cheapest quality boost
 * *Skills* — teach your agent team-specific workflows
-* *Use it for boring stuff* — boilerplate, tests, migrations, docs, regex
 
+[data-timing=45]
 === Monday morning
 
 [%step]
 * [ ] Try Claude Code or https://pi.dev[pi] on a *small* non-critical task
-* [ ] Write a `CLAUDE.md` / `AGENTS.md` for your project
+* [ ] Have it write a `CLAUDE.md` / `AGENTS.md` or skill for your task
 * [ ] Add a Skill for your team's review checklist
 * [ ] Review AI output like you'd review a junior's PR
 
@@ -212,21 +229,14 @@ Because that's roughly what happened.
 [%step]
 *You* are still the engineer/builder. The agent is a power tool.
 
-=== !
+[data-timing=45]
+=== The End!
 
+[%step]
 [.lead]
 It's not magic — it's a while loop. +
 Learn how it works. Use it wisely.
 
-{nbsp}
-
-{nbsp}
-
-Max Rydahl Andersen +
-[.small]
-@maxandersen · github.com/maxandersen
-
-{nbsp}
-
-[.small]
-Questions?
+[%step]
+@maxandersen +
+https://maxandersen.github.io/presentations
