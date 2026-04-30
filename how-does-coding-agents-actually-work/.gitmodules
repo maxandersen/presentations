@@ -1,0 +1,3 @@
+[submodule "examples/openai-java-plugins-quickstart"]
+	path = examples/openai-java-plugins-quickstart
+	url = https://github.com/maxandersen/openai-java-plugins-quickstart
