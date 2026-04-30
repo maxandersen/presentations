@@ -1,17 +1,24 @@
-# Presentations
+= My Presentation
+:author: max
 
-Presentations by Max Andersen. Each presentation is archived in separate branches.
+== Render once
 
-The presentations are done using asciidoctor + reveal.js and the whole thing is wired up with a link:src/docs/adoc2reveal.java[JBang script].
+[source,bash]
+----
+lazyslide render slides/
+----
 
-The advantage is that you need zero installation and setup for this. No Java, Maven, Ruby, Gems etc. setup. All done and in isolated and in a reproducible manner.
+== Live preview
 
-You can run `./index.adoc --serve` and it will download or all necessary and render and serve the presentation on http://localhost:8000 
+[source,bash]
+----
+lazyslide serve slides/
+----
 
-If you already have jbang installed or running on Windows where the shebang is not supported you can do:
+== Project layout
 
-`jbang adoc2reveal.java --serve` 
-
-This will get you a `index.html` generated anytime a `.adoc` file changes. 
-
-You can open it directly from the filesystem, but works best when served from a server.
+- `slides/` — slide `.adoc` files (scanned in lexicographic order)
+- `slides/_attributes.adoc` — shared reveal.js and theme settings
+- `slides/css/` — custom stylesheets
+- `slides/img/` — images and diagrams
+- `slides/public/` — rendered output (git-ignored)
