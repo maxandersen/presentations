@@ -21,6 +21,7 @@
 == Max who?
 
 * 🇩🇰 Danish — 17 years abroad (Switzerland → JBoss → Red Hat → IBM) — *back home since 2022*
+* Red Hat Distinguished Engineer, STSM @ IBM
 * 20+ years building developer tools (Quarkus, JBang, Hibernate, ...)
 * Building with AI/LLM coding since 2023 (ChatGPT API)
 * Reconnecting with the local dev community — glad to be here!
@@ -229,19 +230,13 @@ Because that's roughly what happened.
 *You* are still the engineer/builder. The agent is a power tool.
 
 [data-timing=45]
-=== !
+=== The End!
 
+[%step]
 [.lead]
 It's not magic — it's a while loop. +
 Learn how it works. Use it wisely.
 
-{nbsp}
-
-{nbsp}
-
-Max Rydahl Andersen +
-@maxandersen · linkedin.com/in/maxrydahlandersen/
-
-{nbsp}
-
-Questions?
+[%step]
+@maxandersen +
+https://maxandersen.github.io/presentations
