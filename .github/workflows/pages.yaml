@@ -1,30 +1,150 @@
-name: Build and deploy 
+name: Build and deploy
 
 on:
   push:
     branches:
-      - '*' # matches every branch that doesn't contain a '/'
+      - '*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.ref_name != 'gh-pages'
 
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
           persist-credentials: false
-          submodules: true  # TODO remove this if not using submodules in Hexo
+          submodules: true
 
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
+      - name: Setup JBang
+        uses: jbangdev/setup-jbang@main
 
-      - name: Build page 🔧
-        run: ./index.adoc
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@v1
 
-      - name: Deploy to GH Pages 🚀
+      - name: Build page
+        run: |
+          if [ -f adoc2reveal.java ]; then
+            ./index.adoc
+          else
+            jbang lazyslide@maxandersen/lazyslide render slides
+          fi
+
+      - name: Extract Branch
+        uses: nelonoel/branch-name@v1.0.1
+
+      - name: Deploy to GH Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ github.ref }}
+          publish_dir: .
+          destination_dir: ${{ env.BRANCH_NAME }}
+          exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.adoc,README.md,.gitignore,.git'
+
+  update-index:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          fetch-depth: 1
+
+      - name: Generate landing page
+        shell: bash
+        run: |
+          # Collect presentation directories
+          dirs=()
+          for d in */; do
+            name="${d%/}"
+            # Skip hidden dirs, main branch copy, and non-presentation artifacts
+            case "$name" in
+              .*|main) continue ;;
+            esac
+            # Only include if it has an index.html (i.e. a real deployed deck)
+            if [ -f "$d/index.html" ]; then
+              dirs+=("$name")
+            fi
+          done
+
+          # Sort
+          IFS=$'\n' dirs=($(sort <<<"${dirs[*]}")); unset IFS
+
+          # Build the HTML
+          cat > index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>Presentations — Max Rydahl Andersen</title>
+          <style>
+            *, *::before, *::after { box-sizing: border-box; }
+            body {
+              margin: 0; padding: 2rem;
+              font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+              background: #111; color: #e0e0e0;
+            }
+            h1 { font-size: 2rem; margin-bottom: .25rem; color: #fff; }
+            .subtitle { color: #888; margin-bottom: 2rem; }
+            .subtitle a { color: #8bd5ff; }
+            .grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+              gap: 1.25rem;
+            }
+            a.card {
+              display: block; padding: 1.5rem;
+              background: #1a1a2e; border: 1px solid #333;
+              border-radius: 8px; text-decoration: none; color: #e0e0e0;
+              transition: border-color .15s, transform .15s;
+            }
+            a.card:hover { border-color: #8bd5ff; transform: translateY(-2px); }
+            a.card h2 { margin: 0 0 .5rem; font-size: 1.15rem; color: #8bd5ff; }
+            a.card p  { margin: 0; font-size: .9rem; color: #999; }
+            footer { margin-top: 3rem; color: #555; font-size: .8rem; }
+          </style>
+          </head>
+          <body>
+          <h1>Presentations</h1>
+          <p class="subtitle">Max Rydahl Andersen &mdash; <a href="https://github.com/maxandersen">@maxandersen</a></p>
+          <div class="grid">
+          EOF
+
+          for dir in "${dirs[@]}"; do
+            # Capitalise words, replace hyphens with spaces
+            title=$(echo "$dir" | tr '-' ' ' | awk '{for(i=1;i<=NF;i++) $i=toupper(substr($i,1,1)) substr($i,2)}1')
+            cat >> index.html <<CARD
+          <a class="card" href="${dir}/">
+            <h2>${title}</h2>
+            <p>${dir}</p>
+          </a>
+          CARD
+          done
+
+          cat >> index.html <<'EOF'
+          </div>
+          <footer>Auto-generated from deployed branches.</footer>
+          </body>
+          </html>
+          EOF
+
+      - name: Commit landing page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet && echo "No changes to index" && exit 0
+          git commit -m "update landing page index"
+          git push
