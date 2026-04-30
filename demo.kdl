@@ -1,0 +1,33 @@
+layout {
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+
+    tab name="slides+pi" {
+        pane split_direction="horizontal" {
+            pane size="25%" command="bash" {
+                args "-lc" "lazyslide serve"
+            }
+            pane size="75%" command="bash" focus=true {
+                args "-lc" "pi -r"
+            }
+        }
+    }
+
+    tab name="claude|pi" {
+        pane split_direction="vertical" {
+            pane command="bash" {
+                args "-lc" "cd demo/claude && claude"
+            }
+            pane command="bash" {
+                args "-lc" "cd demo/pi && pi"
+            }
+        }
+    }
+}
