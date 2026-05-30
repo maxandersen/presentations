@@ -1,2 +1,4 @@
 index.html
 *.dylib
+public/
+.pi/

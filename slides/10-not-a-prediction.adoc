@@ -1,0 +1,36 @@
+== This is not a prediction
+
+AI writing code is *not* "the future". +
+It is *already* happening:
+
+[%step]
+* In your IDE
+* In your PRs
+* In your teammate's commits
+* In the code you're about to review
+
+[.fragment]
+The question is no longer *if*. +
+It's *how you relate to it*.
+
+[NOTE.speaker]
+--
+Anchor the talk in present tense. Avoid speculation about AGI etc.
+--
+
+== "But I don't use it"
+
+That's fine. +
+Your *colleagues* do. +
+Your *codebase* does. +
+Your *industry* does.
+
+[.fragment]
+Opting out personally is valid. +
+Opting out professionally is not the same thing.
+
+[NOTE.speaker]
+--
+Important nuance: respect the choice not to use it.
+But you still need to understand it to read code, review PRs, hire, mentor.
+--

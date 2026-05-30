@@ -1,0 +1,41 @@
+== A quick show of hands
+
+[%step]
+* Who used AI to write code *this week*?
+* Who *refused* to use AI this week?
+* Who is *quietly worried* about either answer?
+
+[NOTE.speaker]
+--
+Read the room. The mix in the room is the talk.
+Tell them: whichever hand you raised — this talk is for you.
+--
+
+== The two reactions I keep hearing
+
+[.columns]
+=== !
+
+[.column]
+--
+[.persona.enthusiast]
+"This is the biggest productivity jump of my career."
+--
+
+[.column]
+--
+[.persona.skeptic]
+"This is going to destroy the craft I love."
+--
+
+{nbsp}
+
+[.fragment]
+Both are honest. +
+Neither is a strategy.
+
+[NOTE.speaker]
+--
+Validate both. Don't pick a side yet.
+The whole point of the talk: neither extreme is sustainable.
+--

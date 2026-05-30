@@ -1,0 +1,14 @@
+:author: Max Rydahl Andersen
+:revealjs_theme: white
+:revealjs_transition: fade
+:revealjs_slideNumber: c/t
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_width: 1920
+:revealjs_height: 1080
+:icons: font
+:source-highlighter: highlightjs
+:highlightjs-theme: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/styles/atom-one-dark.min.css
+:imagesdir: img
+:customcss: css/presentation.css
+:experimental:

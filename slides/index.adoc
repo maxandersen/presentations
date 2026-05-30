@@ -1,0 +1,22 @@
+= You Are Not Your Code
+:author: Max Rydahl Andersen
+
+include::_attributes.adoc[]
+
+include::00-title.adoc[]
+
+include::05-hook.adoc[]
+
+include::10-not-a-prediction.adoc[]
+
+include::20-personas.adoc[]
+
+include::30-identity.adoc[]
+
+include::40-honest-look.adoc[]
+
+include::50-craft.adoc[]
+
+include::60-team.adoc[]
+
+include::70-takeaways.adoc[]

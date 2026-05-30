@@ -1,0 +1,47 @@
+== This is a team problem, not a personal one
+
+[%step]
+* Different people on your team are at different stages
+* Most teams have *no shared agreement* on how AI is used
+* That silence is where the friction lives
+* Reviews get weird. Trust gets weird. Estimates get weird.
+
+[NOTE.speaker]
+--
+Pivot from individual to team. This is the section managers will quote.
+--
+
+== Questions to actually ask your team
+
+[%step]
+* Who uses what, for what?
+* Do we disclose AI-generated PRs? Should we?
+* What does "I reviewed it" mean now?
+* What can a junior *not* learn if AI does it for them?
+* Where are we accepting code we don't understand?
+
+[.fragment]
+You don't need answers. +
+You need the *conversation*.
+
+[NOTE.speaker]
+--
+Encourage the audience to start this conversation Monday morning.
+Concrete prompt: pick one of these and bring it to standup.
+--
+
+== Where you and your team stand
+
+[.fragment]
+There is no single right answer.
+
+[%step]
+* A safety-critical team is not a startup
+* A 2-person team is not a 200-person team
+* A greenfield project is not a 15-year monolith
+* Your context decides — but you have to *decide*
+
+[NOTE.speaker]
+--
+Resist prescribing a single policy. The point is intentionality.
+--

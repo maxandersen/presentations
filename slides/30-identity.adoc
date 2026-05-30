@@ -1,0 +1,64 @@
+== "You Are Not Your Code"
+
+Why does this shift feel *personal*?
+
+[%step]
+* We learned to identify with what we type
+* "I am a Java developer." "I am a backend dev."
+* Years of mastery — keystroke by keystroke
+* A tool that types *for* you feels like a tool typing *over* you
+
+[NOTE.speaker]
+--
+Name the emotional core. The fear is not irrational.
+This is identity, not just workflow.
+--
+
+== Code was never the point
+
+[.fragment]
+Code is the *artifact*. +
+Not the *job*.
+
+{nbsp}
+
+[%step]
+* The job is: understanding the problem
+* The job is: choosing what to build
+* The job is: knowing when it's wrong
+* The job is: being accountable for the result
+
+[.fragment]
+None of those got easier.
+
+[NOTE.speaker]
+--
+This is the title-of-the-talk slide. Land it.
+The craft isn't the typing. It's the judgment.
+--
+
+== What actually changes
+
+[.columns]
+=== Before
+
+* Type code
+* Read code
+* Debug code
+* Review code
+
+=== After
+
+* *Decide* what code
+* *Direct* the generation
+* *Verify* it's correct
+* *Own* the outcome
+
+[.fragment]
+The verbs got bigger. +
+The responsibility got bigger.
+
+[NOTE.speaker]
+--
+The job didn't shrink. It moved up the stack of decisions.
+--

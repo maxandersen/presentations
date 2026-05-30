@@ -1,0 +1,84 @@
+== The developers I talk to
+
+I want to introduce you to four of them.
+
+[%step]
+* The Enthusiast
+* The Skeptic
+* The Pragmatist
+* The Quietly Lost
+
+[NOTE.speaker]
+--
+These are composites of real conversations.
+Tell the audience: see who you recognise — including in the mirror.
+--
+
+== The Enthusiast
+
+[.persona.enthusiast]
+"I ship 3x more. I can finally build the side projects I dreamed about. Why is anyone still typing by hand?"
+
+[%step]
+* *Strength:* leverage, exploration, momentum
+* *Risk:* shipping code they don't understand
+* *Risk:* atrophy of skills they'll need when the model is wrong
+* *Risk:* mistaking *output* for *value*
+
+[NOTE.speaker]
+--
+Don't mock them. They're often right about productivity.
+But "I shipped it" ≠ "it works" ≠ "it's maintainable".
+--
+
+== The Skeptic
+
+[.persona.skeptic]
+"It hallucinates. It writes plausible nonsense. I spent more time fixing it than writing it myself. The craft matters."
+
+[%step]
+* *Strength:* taste, rigor, defending quality
+* *Risk:* judging today's tools by last year's experience
+* *Risk:* becoming the person the team routes *around*
+* *Risk:* confusing "I don't like it" with "it doesn't work"
+
+[NOTE.speaker]
+--
+The skeptic is often the best engineer in the room.
+Their concerns are real. But the tools moved fast.
+"I tried it in 2023" is not a current data point.
+--
+
+== The Pragmatist
+
+[.persona.pragmatist]
+"I use it for the boring stuff. Tests, scaffolding, that regex I always forget. I don't use it for the parts I actually care about."
+
+[%step]
+* *Strength:* clear sense of where it helps
+* *Strength:* still owns the architecture and the hard calls
+* *Risk:* the "boring stuff" line keeps moving
+* *Risk:* underestimating how the tool changes *what* boring means
+
+[NOTE.speaker]
+--
+This is where most experienced devs end up — for now.
+But the boundary is not static. Re-evaluate quarterly, not yearly.
+--
+
+== The Quietly Lost
+
+[.persona.lost]
+"Everyone on my team is doing this. I nod in standup. I don't actually know what tools they use or whether I'm falling behind."
+
+[%step]
+* *Most common reaction I see*
+* *Risk:* silence becomes a career problem
+* *Risk:* shame stops them asking
+* *The room is bigger than they think*
+
+[NOTE.speaker]
+--
+Be gentle here. This is the largest group and the most invisible one.
+Encourage: ask in your team. You are not the only one.
+--

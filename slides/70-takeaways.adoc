@@ -1,0 +1,61 @@
+== What I'm asking you to do
+
+Not "use AI". +
+Not "don't use AI". +
+*Understand it.*
+
+[%step]
+* Try the tools your team uses — at least enough to review them
+* Form an opinion based on *this year*, not 2023
+* Notice what you actually identify with in your work
+* Talk about it with your team, not just on Twitter
+
+[NOTE.speaker]
+--
+This is the call to action. Make it small enough to do this week.
+--
+
+== A short checklist
+
+[%step]
+. Use a current AI coding tool on a real task this week
+. Review one AI-generated PR with full attention
+. Ask one teammate how *they* use it
+. Write down one thing it did well, one thing it did badly
+. Decide what you *won't* delegate — and why
+
+[NOTE.speaker]
+--
+Optional: offer to share the checklist as a link.
+--
+
+== If you remember one thing
+
+[.huge]
+You are not your code.
+
+{nbsp}
+
+[.big]
+You are the judgment behind it. +
+That part is not getting automated.
+
+[NOTE.speaker]
+--
+Land the title. Let it breathe. Don't rush to the next slide.
+--
+
+== Thank you
+
+Questions, disagreements, war stories — all welcome.
+
+{nbsp}
+
+@maxandersen +
+https://xam.dk
+
+[NOTE.speaker]
+--
+Leave 5+ minutes for Q&A. The room will have strong opinions —
+that's the whole point of the talk.
+--
