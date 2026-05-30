@@ -1,5 +1,15 @@
 == The Enthusiast
 
+[.columns]
+=== !
+
+[.column]
+--
+image::personas/1-enthusiast.png[The Enthusiast,width=85%]
+--
+
+[.column]
+--
 [.persona.enthusiast]
 "I ship 3x more. I can finally build the side projects I dreamed about. Why is anyone still typing by hand?"
 
@@ -8,6 +18,7 @@
 * *Risk:* shipping code they don't understand
 * *Risk:* atrophy of skills they'll need when the model is wrong
 * *Risk:* mistaking *output* for *value*
+--
 
 [NOTE.speaker]
 --
@@ -20,6 +31,16 @@ But "I shipped it" ≠ "it works" ≠ "it's maintainable".
 
 == The Skeptic
 
+[.columns]
+=== !
+
+[.column]
+--
+image::personas/2-skeptic.png[The Skeptic,width=85%]
+--
+
+[.column]
+--
 [.persona.skeptic]
 "It hallucinates. It writes plausible nonsense. I spent more time fixing it than writing it myself. The craft matters."
 
@@ -28,6 +49,7 @@ But "I shipped it" ≠ "it works" ≠ "it's maintainable".
 * *Risk:* judging today's tools by last year's experience
 * *Risk:* becoming the person the team routes *around*
 * *Risk:* confusing "I don't like it" with "it doesn't work"
+--
 
 [NOTE.speaker]
 --
@@ -38,6 +60,16 @@ Their concerns are real. But the tools moved fast.
 
 == The Pragmatist
 
+[.columns]
+=== !
+
+[.column]
+--
+image::personas/3-pragmatist.png[The Pragmatist,width=85%]
+--
+
+[.column]
+--
 [.persona.pragmatist]
 "I use it for the boring stuff. Tests, scaffolding, that regex I always forget. I don't use it for the parts I actually care about."
 
@@ -46,6 +78,7 @@ Their concerns are real. But the tools moved fast.
 * *Strength:* still owns the architecture and the hard calls
 * *Risk:* the "boring stuff" line keeps moving
 * *Risk:* underestimating how the tool changes *what* boring means
+--
 
 [NOTE.speaker]
 --
@@ -55,6 +88,16 @@ But the boundary is not static. Re-evaluate quarterly, not yearly.
 
 == The Quietly Lost
 
+[.columns]
+=== !
+
+[.column]
+--
+image::personas/4-quietly-lost.png[The Quietly Lost,width=85%]
+--
+
+[.column]
+--
 [.persona.lost]
 "Everyone on my team is doing this. I nod in standup. I don't actually know what tools they use or whether I'm falling behind."
 
@@ -63,6 +106,7 @@ But the boundary is not static. Re-evaluate quarterly, not yearly.
 * *Risk:* silence becomes a career problem
 * *Risk:* shame stops them asking
 * *The room is bigger than they think*
+--
 
 [NOTE.speaker]
 --
