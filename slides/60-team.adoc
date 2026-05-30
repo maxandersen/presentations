@@ -21,27 +21,17 @@ Pivot from individual to team. This is the section managers will quote.
 * Where are we accepting code we don't understand?
 
 [.fragment]
-You don't need answers. +
-You need the *conversation*.
-
-[NOTE.speaker]
---
-Encourage the audience to start this conversation Monday morning.
-Concrete prompt: pick one of these and bring it to standup.
---
-
-== Where you and your team stand
+You don't need answers. You need the *conversation*.
 
 [.fragment]
-There is no single right answer.
-
-[%step]
-* A safety-critical team is not a startup
-* A 2-person team is not a 200-person team
-* A greenfield project is not a 15-year monolith
-* Your context decides — but you have to *decide*
+There is no single right policy — +
+a safety-critical team is not a startup, +
+a 2-person team is not 200, +
+but you have to *decide*.
 
 [NOTE.speaker]
 --
-Resist prescribing a single policy. The point is intentionality.
+Encourage starting this conversation Monday morning.
+Resist prescribing a single policy — the point is intentionality.
+Concrete prompt: pick one of these questions and bring it to standup.
 --

@@ -1,55 +1,34 @@
-== What AI is actually good at (today)
+== What AI is good at — and isn't
 
-[%step]
-* Boilerplate, scaffolding, glue code
-* "How do I do X in library Y" — faster than docs
-* Test cases you would have skipped
-* Renames, refactors, format conversions
+[.columns]
+=== !
+
+[.column]
+--
+.Good at (today)
+* Boilerplate, scaffolding, glue
+* "How do I do X in lib Y"
+* Tests you would have skipped
+* Renames, refactors, conversions
 * Explaining unfamiliar code
 * First drafts of almost anything
-
-[NOTE.speaker]
---
-Be concrete. Audience needs to recognise their own workflow.
 --
 
-== What AI is still bad at (today)
-
-[%step]
-* Knowing what it *doesn't* know
-* Long-range consistency in a big codebase
+[.column]
+--
+.Still bad at (today)
+* Knowing what it doesn't know
+* Long-range consistency
 * Your team's unwritten conventions
-* Saying "this is a bad idea, don't build it"
-* Being accountable when it's wrong
+* Saying "don't build this"
+* Being accountable
+--
 
 [.fragment]
-Notice: the bad-at list is *exactly* the senior-engineer list.
+The bad-at list is *exactly* the senior-engineer list.
 
 [NOTE.speaker]
 --
-This is the slide that lands with skeptics.
-Their value didn't disappear — it got *more* concentrated.
---
-
-== The uncomfortable middle
-
-[.fragment]
-It's not "AI replaces devs". +
-It's not "AI is useless hype".
-
-{nbsp}
-
-[.fragment]
-It's: *the floor came up, and the ceiling moved.*
-
-[%step]
-* Juniors can do more, sooner
-* Seniors are more leveraged than ever
-* The *middle* is where the role is being redefined
-* That's uncomfortable — and that's where most of us live
-
-[NOTE.speaker]
---
-Acknowledge the squeeze on mid-level devs explicitly.
-This is the honest part the marketing decks skip.
+Land both halves, then the punchline. Slow down on the last line — this is what skeptics need to hear.
+Their value didn't disappear, it got more concentrated.
 --

@@ -9,6 +9,8 @@ include::05-hook.adoc[]
 
 include::10-not-a-prediction.adoc[]
 
+include::15-middle.adoc[]
+
 include::20-personas.adoc[]
 
 include::30-identity.adoc[]

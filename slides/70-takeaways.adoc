@@ -1,24 +1,10 @@
-== What I'm asking you to do
+== What I'm asking you to do this week
 
-Not "use AI". +
-Not "don't use AI". +
+Not "use AI". Not "don't use AI". +
 *Understand it.*
 
 [%step]
-* Try the tools your team uses — at least enough to review them
-* Form an opinion based on *this year*, not 2023
-* Notice what you actually identify with in your work
-* Talk about it with your team, not just on Twitter
-
-[NOTE.speaker]
---
-This is the call to action. Make it small enough to do this week.
---
-
-== A short checklist
-
-[%step]
-. Use a current AI coding tool on a real task this week
+. Use a current AI coding tool on a real task
 . Review one AI-generated PR with full attention
 . Ask one teammate how *they* use it
 . Write down one thing it did well, one thing it did badly
@@ -26,6 +12,10 @@ This is the call to action. Make it small enough to do this week.
 
 [NOTE.speaker]
 --
+Call to action. Small enough to do this week.
+If you opt out personally, that's fine — you still need to understand it
+to review PRs, hire, and mentor. Opting out professionally is not the same
+thing as opting out personally.
 Optional: offer to share the checklist as a link.
 --
 

@@ -14,30 +14,7 @@ Name the emotional core. The fear is not irrational.
 This is identity, not just workflow.
 --
 
-== Code was never the point
-
-[.fragment]
-Code is the *artifact*. +
-Not the *job*.
-
-{nbsp}
-
-[%step]
-* The job is: understanding the problem
-* The job is: choosing what to build
-* The job is: knowing when it's wrong
-* The job is: being accountable for the result
-
-[.fragment]
-None of those got easier.
-
-[NOTE.speaker]
---
-This is the title-of-the-talk slide. Land it.
-The craft isn't the typing. It's the judgment.
---
-
-== What actually changes
+== Code is the artifact, not the job
 
 [.columns]
 === Before
@@ -60,5 +37,7 @@ The responsibility got bigger.
 
 [NOTE.speaker]
 --
-The job didn't shrink. It moved up the stack of decisions.
+This is the title-of-the-talk slide. Land it slowly.
+The craft is not the typing — it's the judgment, the choosing, the owning.
+None of those got easier.
 --

@@ -1,0 +1,22 @@
+== The uncomfortable middle
+
+[.fragment]
+It's not "AI replaces devs". +
+It's not "AI is useless hype".
+
+{nbsp}
+
+[.fragment]
+It's: *the floor came up, and the ceiling moved.*
+
+[%step]
+* Juniors can do more, sooner
+* Seniors are more leveraged than ever
+* The *middle* is where the role is being redefined
+* That's uncomfortable — and that's where most of us live
+
+[NOTE.speaker]
+--
+Name the squeeze before introducing the personas.
+The four personas are how people *respond* to this middle.
+--
