@@ -1,3 +1,4 @@
+[data-timing=90]
 == A quick show of hands
 
 [%step]
@@ -11,6 +12,7 @@ Read the room. The mix in the room is the talk.
 Tell them: whichever hand you raised — this talk is for you.
 --
 
+[data-timing=60]
 == The two reactions I keep hearing
 
 [%step]

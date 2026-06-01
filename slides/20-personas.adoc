@@ -1,3 +1,4 @@
+[data-timing=120]
 == The Enthusiast
 
 ++++
@@ -24,6 +25,7 @@ Then on this slide: don't mock the Enthusiast. They're often right about product
 But "I shipped it" ≠ "it works" ≠ "it's maintainable".
 --
 
+[data-timing=90]
 == The Skeptic
 
 ++++
@@ -48,6 +50,7 @@ Their concerns are real. But the tools moved fast.
 "I tried it in 2023" is not a current data point.
 --
 
+[data-timing=90]
 == The Pragmatist
 
 ++++
@@ -71,6 +74,7 @@ This is where most experienced devs end up — for now.
 But the boundary is not static. Re-evaluate quarterly, not yearly.
 --
 
+[data-timing=120]
 == The Quietly Lost
 
 ++++

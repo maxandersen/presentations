@@ -1,3 +1,4 @@
+[data-timing=60]
 == If you remember one thing
 
 [.huge]
@@ -14,6 +15,7 @@ That part is not getting automated.
 Land the title. Let it breathe. Don't rush to the next slide.
 --
 
+[data-timing=0]
 == Thank you
 
 Questions, disagreements, war stories — all welcome.

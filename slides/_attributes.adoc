@@ -12,3 +12,4 @@
 :imagesdir: img
 :customcss: css/presentation.css
 :experimental:
+:revealjs_totalTime: 1500

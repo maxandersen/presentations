@@ -1,4 +1,5 @@
 [%notitle]
+[data-timing=30]
 == Title
 
 [.huge]

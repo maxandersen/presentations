@@ -1,3 +1,4 @@
+[data-timing=60]
 == AI writing code is *not* "the future"
 
 [%step]

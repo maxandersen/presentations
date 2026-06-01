@@ -1,3 +1,4 @@
+[data-timing=90]
 == What actually is working for us
 
 [%step]
@@ -14,6 +15,7 @@ The key was safety: people started sharing once they knew nobody would mock them
 Some were way ahead, some hadn't started — both were fine.
 --
 
+[data-timing=60]
 == There is no single right policy
 
 [%step]

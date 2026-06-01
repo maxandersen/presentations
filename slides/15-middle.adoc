@@ -1,3 +1,4 @@
+[data-timing=120]
 == The uncomfortable middle
 
 [.fragment]
