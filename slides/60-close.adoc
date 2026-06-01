@@ -20,6 +20,19 @@ Land the title. Let it breathe. Don't rush to the next slide.
 
 Questions, disagreements, war stories — all welcome.
 
+
+++++
+<div class="personas-overview">
+  <img src="img/personas/overview.png" alt="Four developers" style="max-height:45vh;" />
+  <div class="persona-labels">
+    <span class="persona-label enthusiast">The Enthusiast</span>
+    <span class="persona-label skeptic">The Skeptic</span>
+    <span class="persona-label pragmatist">The Pragmatist</span>
+    <span class="persona-label lost">The Quietly Lost</span>
+  </div>
+</div>
+++++
+
 {nbsp}
 
 @maxandersen +
