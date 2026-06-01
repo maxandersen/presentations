@@ -10,6 +10,9 @@ Why Every Dev Needs to Understand AI — Like It or Not
 {nbsp}
 
 Max Rydahl Andersen +
+Red Hat Distinguished Engineer & STSM, IBM +
+Quarkus co-lead +
+Human + 
 @maxandersen
 
 [NOTE.speaker]

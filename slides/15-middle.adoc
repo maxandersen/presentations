@@ -1,10 +1,10 @@
 == The uncomfortable middle
 
-[.fragment,step=1]
+[.fragment]
 It's not "AI replaces devs". +
 It's not "AI is useless hype".
 
-[.fragment,step=2]
+[.fragment]
 It's: *the floor came up, and the ceiling moved.*
 
 ++++

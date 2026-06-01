@@ -1,6 +1,5 @@
+[%notitle]
 == Meet the team!
-
-== !
 
 ++++
 <div class="personas-overview">
