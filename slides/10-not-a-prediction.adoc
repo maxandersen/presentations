@@ -1,11 +1,12 @@
-== This is not a prediction
+== AI writing code is *not* "the future"
 
-AI writing code is *not* "the future". +
+[%step]
 It is *already* happening:
 
 [%step]
 * In your IDE
 * In your PRs
+* In your boss's emails
 * In your teammate's commits
 * In the code you're about to review
 

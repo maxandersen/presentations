@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" font-family="'Segoe UI', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="900" height="450" fill="none"/>
+
+  <!-- === LEFT SIDE: BEFORE === -->
+  <text x="225" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#ccc">Before</text>
+
+  <!-- Floor (low) -->
+  <rect x="75" y="340" width="300" height="8" rx="3" fill="#888"/>
+  <text x="225" y="370" text-anchor="middle" font-size="14" fill="#999">floor</text>
+
+  <!-- Ceiling (low, close to floor) -->
+  <rect x="75" y="180" width="300" height="8" rx="3" fill="#888"/>
+  <text x="225" y="170" text-anchor="middle" font-size="14" fill="#999">ceiling</text>
+
+  <!-- The gap area -->
+  <rect x="75" y="188" width="300" height="152" rx="0" fill="#555" opacity="0.15"/>
+
+  <!-- Person icon in the middle -->
+  <circle cx="225" cy="270" r="16" fill="none" stroke="#aaa" stroke-width="2"/>
+  <line x1="225" y1="286" x2="225" y2="325" stroke="#aaa" stroke-width="2"/>
+  <line x1="205" y1="300" x2="245" y2="300" stroke="#aaa" stroke-width="2"/>
+
+  <!-- Arrows showing limited range -->
+  <line x1="180" y1="195" x2="180" y2="335" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="176,200 184,200 180,190" fill="#aaa"/>
+  <polygon points="176,330 184,330 180,340" fill="#aaa"/>
+  <text x="165" y="270" text-anchor="end" font-size="12" fill="#999" transform="rotate(-90,165,270)">narrow range</text>
+
+  <!-- Divider -->
+  <line x1="450" y1="60" x2="450" y2="420" stroke="#555" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- === RIGHT SIDE: NOW === -->
+  <text x="675" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#e0e0e0">Now</text>
+
+  <!-- Floor (raised up) -->
+  <rect x="525" y="280" width="300" height="8" rx="3" fill="#4ecdc4"/>
+  <text x="675" y="310" text-anchor="middle" font-size="14" fill="#4ecdc4">floor ↑</text>
+
+  <!-- Arrow showing floor moved up -->
+  <line x1="510" y1="340" x2="510" y2="285" stroke="#4ecdc4" stroke-width="2"/>
+  <polygon points="506,290 514,290 510,280" fill="#4ecdc4"/>
+  <line x1="505" y1="340" x2="515" y2="340" stroke="#4ecdc4" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Ceiling (way up high, fading/dashed) -->
+  <rect x="525" y="65" width="300" height="4" rx="2" fill="#ff6b6b" opacity="0.3"/>
+  <line x1="525" y1="67" x2="825" y2="67" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="8,6" opacity="0.5"/>
+  <text x="675" y="58" text-anchor="middle" font-size="14" fill="#ff6b6b" opacity="0.7">ceiling ↑↑</text>
+
+  <!-- Upward arrows suggesting open ceiling -->
+  <line x1="600" y1="75" x2="600" y2="55" stroke="#ff6b6b" stroke-width="1.5" opacity="0.4"/>
+  <polygon points="597,58 603,58 600,50" fill="#ff6b6b" opacity="0.4"/>
+  <line x1="675" y1="75" x2="675" y2="55" stroke="#ff6b6b" stroke-width="1.5" opacity="0.4"/>
+  <polygon points="672,58 678,58 675,50" fill="#ff6b6b" opacity="0.4"/>
+  <line x1="750" y1="75" x2="750" y2="55" stroke="#ff6b6b" stroke-width="1.5" opacity="0.4"/>
+  <polygon points="747,58 753,58 750,50" fill="#ff6b6b" opacity="0.4"/>
+
+  <!-- The gap area (much bigger) -->
+  <rect x="525" y="71" width="300" height="209" rx="0" fill="#4ecdc4" opacity="0.06"/>
+
+  <!-- Person icon (higher up, in the uncomfortable middle) -->
+  <circle cx="675" cy="190" r="16" fill="none" stroke="#e0e0e0" stroke-width="2.5"/>
+  <line x1="675" y1="206" x2="675" y2="250" stroke="#e0e0e0" stroke-width="2.5"/>
+  <line x1="655" y1="222" x2="695" y2="222" stroke="#e0e0e0" stroke-width="2.5"/>
+
+  <!-- Question marks around person -->
+  <text x="640" y="185" font-size="18" fill="#ff6b6b" opacity="0.6">?</text>
+  <text x="710" y="195" font-size="14" fill="#ff6b6b" opacity="0.5">?</text>
+  <text x="650" y="250" font-size="16" fill="#ff6b6b" opacity="0.5">?</text>
+
+  <!-- Wide range arrow -->
+  <line x1="840" y1="78" x2="840" y2="275" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="836,83 844,83 840,73" fill="#e0e0e0"/>
+  <polygon points="836,270 844,270 840,280" fill="#e0e0e0"/>
+  <text x="855" y="180" text-anchor="start" font-size="12" fill="#ccc" transform="rotate(-90,855,180)">wide open range</text>
+
+  <!-- Bottom label -->
+  <text x="675" y="400" text-anchor="middle" font-size="16" fill="#ff6b6b" opacity="0.8" font-style="italic">the uncomfortable middle</text>
+</svg>

@@ -16,24 +16,32 @@ This is identity, not just workflow.
 
 == Code is the artifact, not the job
 
-[.columns]
-=== Before
-
-* Type code
-* Read code
-* Debug code
-* Review code
-
-=== After
-
-* *Decide* what code
-* *Direct* the generation
-* *Verify* it's correct
-* *Own* the outcome
-
-[.fragment]
-The verbs got bigger. +
-The responsibility got bigger.
+++++
+<div style="display:flex; justify-content:center; gap:4em;">
+  <div>
+    <h3>Before</h3>
+    <ul>
+      <li>Type code</li>
+      <li>Read code</li>
+      <li>Debug code</li>
+      <li>Review code</li>
+    </ul>
+  </div>
+  <div class="fragment">
+    <h3>After</h3>
+    <ul>
+      <li><strong>Decide</strong> what code</li>
+      <li><strong>Direct</strong> the generation</li>
+      <li><strong>Verify</strong> it's correct</li>
+      <li><strong>Own</strong> the outcome</li>
+    </ul>
+  </div>
+</div>
+<p class="fragment" style="text-align:center; margin-top:1em;">
+  The verbs got bigger.<br/>
+  The responsibility got bigger.
+</p>
+++++
 
 [NOTE.speaker]
 --

@@ -15,7 +15,7 @@ Pivot from individual to team. This is the section managers will quote.
 
 [%step]
 * Who uses what, for what?
-* Do we disclose AI-generated PRs? Should we?
+* Should we label AI-written code in PRs?
 * What does "I reviewed it" mean now?
 * What can a junior *not* learn if AI does it for them?
 * Where are we accepting code we don't understand?

@@ -3,7 +3,7 @@
 [%step]
 * Who used AI to write code *this week*?
 * Who *refused* to use AI this week?
-* Who is *quietly worried* about either answer?
+* Who is *quietly worried* answering either question?
 
 [NOTE.speaker]
 --
@@ -13,26 +13,22 @@ Tell them: whichever hand you raised — this talk is for you.
 
 == The two reactions I keep hearing
 
-[.columns]
-=== !
-
-[.column]
---
+[%step]
+[cols="1,1", frame=none, grid=none]
+|===
+a|
 [.persona.enthusiast]
 "This is the biggest productivity jump of my career."
---
 
-[.column]
---
+a|
 [.persona.skeptic]
 "This is going to destroy the craft I love."
---
 
-{nbsp}
-
+2+^a|
 [.fragment]
 Both are honest. +
 Neither is a strategy.
+|===
 
 [NOTE.speaker]
 --
