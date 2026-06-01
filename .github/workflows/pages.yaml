@@ -36,9 +36,11 @@ jobs:
         run: |
           if [ -f adoc2reveal.java ] && [ -f index.adoc ]; then
             ./index.adoc
+            echo "PUBLISH_DIR=." >> "$GITHUB_ENV"
           else
             jbang trust add https://github.com/maxandersen/lazyslide/
             jbang lazyslide@maxandersen/lazyslide render slides
+            echo "PUBLISH_DIR=./public" >> "$GITHUB_ENV"
           fi
 
       - name: Extract Branch
@@ -48,7 +50,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ${{ env.PUBLISH_DIR }}
           destination_dir: ${{ env.BRANCH_NAME }}
           exclude_assets: 'index.adoc,.github,adoc2reveal.java,README.adoc,README.md,.gitignore,.git'
 
