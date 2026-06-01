@@ -15,9 +15,13 @@ include::18-personas-overview.adoc[]
 
 include::20-personas.adoc[]
 
+include::18-personas-overview.adoc[]
+
 include::30-identity.adoc[]
 
 include::40-craft.adoc[]
+
+include::18-personas-overview.adoc[]
 
 include::50-team.adoc[]
 
