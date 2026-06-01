@@ -1,0 +1,33 @@
+== What actually is working for us
+
+[%step]
+* Share your AI experiments openly — *"hand in your AI story, no judgment"*
+* We listen. We don't judge.
+* Weekly "getting better at Claude" — room to mess up, be curious
+* Don't push automation on people — don't type *over* them
+* Let teams/people find their pace
+
+[NOTE.speaker]
+--
+This is from real experience with the Quarkus team.
+The key was safety: people started sharing once they knew nobody would mock them.
+Some were way ahead, some hadn't started — both were fine.
+--
+
+== There is no single right policy
+
+[%step]
+* A 2-person team is not a 200-person team
+* Security-critical ops is not a prototype frontend
+* A regulated bank is not a startup hackathon
+* But you have to *decide* — silence is not a policy
+
+[.fragment]
+Start the conversation. +
+Bring it to standup Monday.
+
+[NOTE.speaker]
+--
+Resist prescribing. The point is intentionality.
+Different contexts need different rules — but all need the conversation.
+--

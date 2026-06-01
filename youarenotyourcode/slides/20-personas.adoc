@@ -1,0 +1,96 @@
+== The Enthusiast
+
+++++
+<div style="display:flex; align-items:flex-start; gap:2em;">
+  <div style="flex:0 0 40%;"><img src="img/personas/1-enthusiast.png" style="width:100%;" /></div>
+  <div style="flex:1;">
+    <div class="persona enthusiast">"I ship 3x more. I can finally build the side projects I dreamed about. Why is anyone still typing by hand?"</div>
+    <ul>
+      <li class="fragment"><strong>Strength:</strong> leverage, exploration, momentum</li>
+      <li class="fragment"><strong>Risk:</strong> shipping code they don't understand</li>
+      <li class="fragment"><strong>Risk:</strong> weakening of skills they'll need when the model is wrong</li>
+      <li class="fragment"><strong>Risk:</strong> mistaking <em>output</em> for <em>value</em></li>
+    </ul>
+  </div>
+</div>
+++++
+
+[NOTE.speaker]
+--
+Lead-in (spoken, not on slide): "I want to introduce you to four developers I keep meeting.
+Composites of real conversations. See who you recognise — including in the mirror."
+
+Then on this slide: don't mock the Enthusiast. They're often right about productivity.
+But "I shipped it" ≠ "it works" ≠ "it's maintainable".
+--
+
+== The Skeptic
+
+++++
+<div style="display:flex; align-items:flex-start; gap:2em;">
+  <div style="flex:0 0 40%;"><img src="img/personas/2-skeptic.png" style="width:100%;" /></div>
+  <div style="flex:1;">
+    <div class="persona skeptic">"It hallucinates. It writes plausible nonsense. I spent more time fixing it than writing it myself. The craft matters."</div>
+    <ul>
+      <li class="fragment"><strong>Strength:</strong> taste, rigor, defending quality</li>
+      <li class="fragment"><strong>Risk:</strong> judging today's tools by last year's experience</li>
+      <li class="fragment"><strong>Risk:</strong> rejecting what works because it feels wrong</li>
+      <li class="fragment"><strong>Risk:</strong> becoming the person the team routes <em>around</em></li>
+    </ul>
+  </div>
+</div>
+++++
+
+[NOTE.speaker]
+--
+The skeptic is often the best engineer in the room.
+Their concerns are real. But the tools moved fast.
+"I tried it in 2023" is not a current data point.
+--
+
+== The Pragmatist
+
+++++
+<div style="display:flex; align-items:flex-start; gap:2em;">
+  <div style="flex:0 0 40%;"><img src="img/personas/3-pragmatist.png" style="width:100%;" /></div>
+  <div style="flex:1;">
+    <div class="persona pragmatist">"I use it for the boring stuff. Tests, scaffolding, that regex I always forget. I don't use it for the parts I actually care about."</div>
+    <ul>
+      <li class="fragment"><strong>Strength:</strong> clear sense of where it helps</li>
+      <li class="fragment"><strong>Strength:</strong> still owns the architecture and the hard calls</li>
+      <li class="fragment"><strong>Risk:</strong> the boundary between "my work" and "AI work" shifts faster than expected</li>
+      <li class="fragment"><strong>Risk:</strong> comfortable today, overtaken tomorrow</li>
+    </ul>
+  </div>
+</div>
+++++
+
+[NOTE.speaker]
+--
+This is where most experienced devs end up — for now.
+But the boundary is not static. Re-evaluate quarterly, not yearly.
+--
+
+== The Quietly Lost
+
+++++
+<div style="display:flex; align-items:flex-start; gap:2em;">
+  <div style="flex:0 0 40%;"><img src="img/personas/4-quietly-lost.png" style="width:100%;" /></div>
+  <div style="flex:1;">
+    <div class="persona lost">"Everyone on my team is doing this. I nod in standup. I don't actually know what tools they use or whether I'm falling behind. If the code writes itself… what am I?"</div>
+    <ul>
+      <li class="fragment"><strong>Strength:</strong> self-aware and ready to learn</li>
+      <li class="fragment"><strong>Risk:</strong> silence becomes a career problem</li>
+      <li class="fragment"><strong>Risk:</strong> shame stops them asking</li>
+      <li class="fragment">I didn't see this group at first — then I saw them <em>everywhere</em></li>
+      <li class="fragment">You are not the only one</li>
+    </ul>
+  </div>
+</div>
+++++
+
+[NOTE.speaker]
+--
+Be gentle here. This is the largest group and the most invisible one.
+Encourage: ask in your team. You are not the only one.
+--

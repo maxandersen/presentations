@@ -1,0 +1,29 @@
+== The uncomfortable middle
+
+[.fragment]
+It's not "AI replaces devs". +
+It's not "AI is useless hype".
+
+[.fragment]
+It's: *the floor came up, and the ceiling moved.*
+
+++++
+<div style="position:relative; min-height:50vh; display:flex; align-items:center; justify-content:center;">
+  <div class="fragment" data-fragment-index="1" style="position:absolute; left:0; bottom:0;"><img src="img/ceilingmoved-left.png" style="max-height:35vh;" /></div>
+  <div class="fragment" data-fragment-index="2" style="position:absolute; right:0; bottom:0;"><img src="img/ceilingmoved-right.png" style="max-height:45vh;" /></div>
+  <div style="text-align:left; max-width:40%; z-index:1;">
+    <ul>
+      <li class="fragment" data-fragment-index="3">The floor came up — juniors can do more, sooner</li>
+      <li class="fragment" data-fragment-index="4">The ceiling moved — seniors are more leveraged than ever</li>
+      <li class="fragment" data-fragment-index="5">The <strong>middle</strong> gets squeezed from both sides</li>
+      <li class="fragment" data-fragment-index="6">That's uncomfortable — and that's where most of us live</li>
+    </ul>
+  </div>
+</div>
+++++
+
+[NOTE.speaker]
+--
+Name the squeeze before introducing the personas.
+The four personas are how people *respond* to this middle.
+--
