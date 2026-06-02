@@ -433,11 +433,20 @@ ul.byline li + li {
 </style></head><body><div class="reveal"><div class="slides"><section id="_title"><div class="slide-content"><div class="paragraph huge"><p>You Are Not Your Code</p></div>
 <div class="paragraph big"><p>Why Every Dev Needs to Understand AI — Like It or Not</p></div>
 <div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph"><p>Max Rydahl Andersen<br>
-Red Hat Distinguished Engineer &amp; STSM, IBM<br>
-Quarkus co-lead<br>
-Human<br>
-@maxandersen</p></div>
+<div style="display:flex; justify-content:space-between; align-items:flex-end; width:100%;">
+  <div style="text-align:left;">
+    Max Rydahl Andersen<br/>
+    Red Hat Distinguished Engineer &amp; STSM, IBM<br/>
+    Quarkus co-lead<br/>
+    Human<br/>
+    @maxandersen
+  </div>
+  <div style="text-align:right;">
+    Red Hat Developer Day<br/>
+    Aarhus @ Bankdata<br/>
+    2 June 2025
+  </div>
+</div>
 <aside class="notes"><div class="ulist"><ul><li><p>30 minutes, target ~20 content slides + buffer.</p></li><li><p>Set the tone: this is not a hype talk, not a doom talk. It&#8217;s an honest look.</p></li><li><p>Mention: I work on dev tools, I talk to a lot of devs, every reaction below is real.</p></li></ul></div></aside></div></section>
 <section id="_a_quick_show_of_hands"><h2>A quick show of hands</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Who used AI to write code <strong>this week</strong>?</p></li><li class="fragment"><p>Who <strong>refused</strong> to use AI this week?</p></li><li class="fragment"><p>Who is <strong>quietly worried</strong> answering either question?</p></li></ul></div>
 <aside class="notes"><div class="paragraph"><p>Read the room. The mix in the room is the talk.
@@ -456,22 +465,27 @@ It&#8217;s <strong>how you relate to it</strong>.</p></div>
   It's not "AI is useless hype".
 </p>
 <p class="fragment" data-fragment-index="1">
-  It's: <strong>the floor came up, and the ceiling moved.</strong>
+  For years we worked to raise the ceiling.<br/>
+  AI didn't raise the ceiling. <strong>It blew the roof off.</strong>
 </p>
-<div style="position:relative; min-height:50vh; display:flex; align-items:center; justify-content:center;">
-  <div class="fragment" data-fragment-index="2" style="position:absolute; left:0; bottom:0;"><img src="img/ceilingmoved-left.png" style="max-height:35vh;" /></div>
-  <div class="fragment" data-fragment-index="3" style="position:absolute; right:0; bottom:0;"><img src="img/ceilingmoved-right.png" style="max-height:45vh;" /></div>
+<p class="fragment" data-fragment-index="4" style="color:#555; font-style:italic;">
+  Turns out that wasn't entirely comforting.
+</p>
+<div style="position:relative; min-height:540px; display:flex; align-items:center; justify-content:center;">
+  <div class="fragment" data-fragment-index="2" style="position:absolute; left:0; bottom:0;"><img src="img/ceilingmoved-left.png" style="max-height:450px;" /></div>
+  <div class="fragment" data-fragment-index="3" style="position:absolute; right:0; bottom:0;"><img src="img/ceilingmoved-right.png" style="max-height:530px;" /></div>
   <div style="text-align:left; max-width:40%; z-index:1;">
     <ul>
-      <li class="fragment" data-fragment-index="4">The floor came up — juniors can do more, sooner</li>
-      <li class="fragment" data-fragment-index="5">The ceiling moved — seniors are more leveraged than ever</li>
-      <li class="fragment" data-fragment-index="6">The <strong>middle</strong> gets squeezed from both sides</li>
-      <li class="fragment" data-fragment-index="7">That's uncomfortable — and that's where most of us live</li>
+      <li class="fragment" data-fragment-index="6">The floor came up — juniors can do more, sooner</li>
+      <li class="fragment" data-fragment-index="7">The ceiling moved — seniors are more leveraged than ever</li>
+      <li class="fragment" data-fragment-index="8">The <strong>middle</strong> gets squeezed from both sides</li>
+      <li class="fragment" data-fragment-index="9">That's uncomfortable — and that's where most of us live</li>
     </ul>
   </div>
 </div>
-<aside class="notes"><div class="paragraph"><p>Name the squeeze before introducing the personas.
-The four personas are how people <strong>respond</strong> to this middle.</p></div></aside></div></section>
+<aside class="notes"><div class="paragraph"><p>"Blew the roof off" — let the image land before the bullets.
+The four personas are how people <strong>respond</strong> to this uncomfortable openness.
+Pause on "not entirely comforting" — let the room sit with it.</p></div></aside></div></section>
 <section id="_meet_the_team"><div class="slide-content"><div class="personas-overview">
   <img src="img/personas/overview.png" alt="Four developers" />
   <div class="persona-labels">
@@ -589,23 +603,52 @@ This is identity, not just workflow.</p></div></aside></div></section>
 <aside class="notes"><div class="paragraph"><p>This is the title-of-the-talk slide. Land it slowly.
 The verbs changed — but the responsibility didn&#8217;t shrink.
 Pause before advancing.</p></div></aside></div></section>
+<section id="_i_was_the_enthusiast"><h2>I was the Enthusiast</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>I got excited. <em>Really</em> excited.</p></li><li class="fragment"><p>I rebuilt workflows. I shipped faster. I felt like I&#8217;d unlocked a cheat code.</p></li><li class="fragment"><p>I assumed my team would feel the same — that <em>most</em> developers would</p></li><li class="fragment"><p>They didn&#8217;t</p></li></ul></div>
+<div class="paragraph fragment"><p>Some were cautious. Some were quiet. Some pushed back.<br>
+And I couldn&#8217;t understand why.</p></div>
+<div class="paragraph fragment"><p>It took me longer than I&#8217;d like to admit to realise:<br>
+<em>I was so caught up in what the tools could do, I forgot to ask what the people around me were feeling.</em></p></div>
+<aside class="notes"><div class="paragraph"><p>This is the honest moment. You were the Enthusiast — own it.
+The insight is not "AI is great" or "AI is scary."
+It&#8217;s: excitement can make you blind to the people next to you.
+That&#8217;s what led to this talk.</p></div></aside></div></section>
+<section id="_the_questions_youre_not_asking_out_loud"><h2>The questions you&#8217;re not asking out loud</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Will I still matter in three years?</p></li><li class="fragment"><p>Is my experience becoming <em>less</em> valuable?</p></li><li class="fragment"><p>Am I falling behind right now?</p></li><li class="fragment"><p>If the code writes itself… what <em>am</em> I?</p></li></ul></div>
+<div class="paragraph"><p>&#160;</p></div>
+<div class="paragraph fragment"><p>These are not weak questions.<br>
+These are the questions of someone paying attention.</p></div>
+<aside class="notes"><div class="paragraph"><p>Read these slowly. Let each one land.
+The audience should feel <strong>seen</strong> — not lectured.
+Don&#8217;t rush to reassure. Sit in the discomfort for a beat.
+The next section (craft, skills) provides the answer — but only after the audience has felt the weight.</p></div></aside></div></section>
 <section id="_the_craft_didnt_shrink_it_shifted"><h2>The craft didn&#8217;t shrink — it shifted</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>What AI is bad at is <strong>exactly</strong> the senior-engineer list</p><div class="ulist"><ul><li><p>Knowing what it doesn&#8217;t know. Long-range consistency. Saying "don&#8217;t build this."</p></li></ul></div></li><li class="fragment"><p>When everyone can generate code, <strong>what you choose to keep</strong> is the differentiator</p><div class="ulist"><ul><li><p>Taste in architecture. Taste in API design. Taste in <strong>when to stop</strong>.</p></li></ul></div></li><li class="fragment"><p>A model can suggest. It cannot <strong>care</strong>.</p></li></ul></div>
 <aside class="notes"><div class="paragraph"><p>This is the emotional turn. Slow down on the last line.
 The craft is not the typing — it&#8217;s the judgment, the choosing, the owning.
 Their value didn&#8217;t disappear, it got more concentrated.</p></div></aside></div></section>
-<section id="_meet_the_team_3"><div class="slide-content"><div class="personas-overview">
-  <img src="img/personas/overview.png" alt="Four developers" />
-  <div class="persona-labels">
-    <span class="persona-label enthusiast">The Enthusiast</span>
-    <span class="persona-label skeptic">The Skeptic</span>
-    <span class="persona-label pragmatist">The Pragmatist</span>
-    <span class="persona-label lost">The Quietly Lost</span>
+<section id="_what_you_thought_made_you_valuable"><h2>What you thought made you valuable</h2><div class="slide-content"><div style="display:flex; justify-content:center; gap:4em;">
+  <div>
+    <h3>What's fading</h3>
+    <ul style="text-decoration:line-through; color:#999;">
+      <li>Remembering APIs</li>
+      <li>Writing boilerplate</li>
+      <li>Knowing framework internals by heart</li>
+      <li>Typing faster than everyone else</li>
+    </ul>
+  </div>
+  <div class="fragment">
+    <h3>What still matters</h3>
+    <ul>
+      <li><strong>Judgment</strong> — knowing what to build and what to stop</li>
+      <li><strong>Taste</strong> — recognizing good from good enough</li>
+      <li><strong>Curiosity</strong> — the drive to understand <em>why</em></li>
+      <li><strong>Empathy</strong> — for users, teammates, future maintainers</li>
+      <li><strong>Trust</strong> — the kind you earn by owning outcomes</li>
+    </ul>
   </div>
 </div>
-<aside class="notes"><div class="paragraph"><p>Hold this slide for a beat. Let the audience scan and recognise.
-Then say: "Four developers I keep meeting. Composites of real conversations.
-See who you recognise — including in the mirror. Let&#8217;s meet them."</p></div>
-<div class="paragraph"><p>Then advance into The Enthusiast.</p></div></aside></div></section>
+<aside class="notes"><div class="paragraph"><p>This is the slide people will photograph.
+Let the struck-through list sit for a moment before revealing the right column.
+The right column should feel like relief — these are things they already have.
+Don&#8217;t say "soft skills." These are hard-won, and the audience knows it.</p></div></aside></div></section>
 <section id="_what_actually_is_working_for_us"><h2>What actually is working for us</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Share your AI experiments openly — <strong>"hand in your AI story, no judgment"</strong></p></li><li class="fragment"><p>We listen. We don&#8217;t judge.</p></li><li class="fragment"><p>Weekly "getting better at Claude" — room to mess up, be curious</p></li><li class="fragment"><p>Don&#8217;t push automation on people — don&#8217;t type <strong>over</strong> them</p></li><li class="fragment"><p>Let teams/people find their pace</p></li></ul></div>
 <aside class="notes"><div class="paragraph"><p>This is from real experience with the Quarkus team.
 The key was safety: people started sharing once they knew nobody would mock them.
@@ -617,12 +660,15 @@ Bring it to standup Monday.</p></div>
 Different contexts need different rules — but all need the conversation.</p></div></aside></div></section>
 <section id="_if_you_remember_one_thing"><h2>If you remember one thing</h2><div class="slide-content"><div class="paragraph huge"><p>You are not your code.</p></div>
 <div class="paragraph"><p>&#160;</p></div>
-<div class="paragraph big"><p>You are the judgment behind it.<br>
-That part is not getting automated.</p></div>
-<aside class="notes"><div class="paragraph"><p>Land the title. Let it breathe. Don&#8217;t rush to the next slide.</p></div></aside></div></section>
+<div class="paragraph big"><p>If your value was typing code faster than everyone else — this future is frightening.</p></div>
+<div class="paragraph fragment big"><p>If your value is understanding people, systems, tradeoffs, and problems —<br>
+this may be the most exciting moment of your career.</p></div>
+<aside class="notes"><div class="paragraph"><p>Land the title. Then the contrast: frightening vs exciting.
+Let the first line sit before revealing the second.
+The audience should leave feeling challenged but <strong>capable</strong>.</p></div></aside></div></section>
 <section id="_thank_you"><h2>Thank you</h2><div class="slide-content"><div class="paragraph"><p>Questions, disagreements, war stories — all welcome.</p></div>
 <div class="personas-overview">
-  <img src="img/personas/overview.png" alt="Four developers" style="max-height:45vh;" />
+  <img src="img/personas/overview.png" alt="Four developers" style="max-height:490px;" />
   <div class="persona-labels">
     <span class="persona-label enthusiast">The Enthusiast</span>
     <span class="persona-label skeptic">The Skeptic</span>
