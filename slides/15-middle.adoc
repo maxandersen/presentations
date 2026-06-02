@@ -7,17 +7,21 @@
   It's not "AI is useless hype".
 </p>
 <p class="fragment" data-fragment-index="1">
-  It's: <strong>the floor came up, and the ceiling moved.</strong>
+  For years we worked to raise the ceiling.<br/>
+  AI didn't raise the ceiling. <strong>It blew the roof off.</strong>
 </p>
-<div style="position:relative; min-height:50vh; display:flex; align-items:center; justify-content:center;">
-  <div class="fragment" data-fragment-index="2" style="position:absolute; left:0; bottom:0;"><img src="img/ceilingmoved-left.png" style="max-height:35vh;" /></div>
-  <div class="fragment" data-fragment-index="3" style="position:absolute; right:0; bottom:0;"><img src="img/ceilingmoved-right.png" style="max-height:45vh;" /></div>
+<p class="fragment" data-fragment-index="4" style="color:#555; font-style:italic;">
+  Turns out that wasn't entirely comforting.
+</p>
+<div style="position:relative; min-height:540px; display:flex; align-items:center; justify-content:center;">
+  <div class="fragment" data-fragment-index="2" style="position:absolute; left:0; bottom:0;"><img src="img/ceilingmoved-left.png" style="max-height:450px;" /></div>
+  <div class="fragment" data-fragment-index="3" style="position:absolute; right:0; bottom:0;"><img src="img/ceilingmoved-right.png" style="max-height:530px;" /></div>
   <div style="text-align:left; max-width:40%; z-index:1;">
     <ul>
-      <li class="fragment" data-fragment-index="4">The floor came up — juniors can do more, sooner</li>
-      <li class="fragment" data-fragment-index="5">The ceiling moved — seniors are more leveraged than ever</li>
-      <li class="fragment" data-fragment-index="6">The <strong>middle</strong> gets squeezed from both sides</li>
-      <li class="fragment" data-fragment-index="7">That's uncomfortable — and that's where most of us live</li>
+      <li class="fragment" data-fragment-index="6">The floor came up — juniors can do more, sooner</li>
+      <li class="fragment" data-fragment-index="7">The ceiling moved — seniors are more leveraged than ever</li>
+      <li class="fragment" data-fragment-index="8">The <strong>middle</strong> gets squeezed from both sides</li>
+      <li class="fragment" data-fragment-index="9">That's uncomfortable — and that's where most of us live</li>
     </ul>
   </div>
 </div>
@@ -25,6 +29,7 @@
 
 [NOTE.speaker]
 --
-Name the squeeze before introducing the personas.
-The four personas are how people *respond* to this middle.
+"Blew the roof off" — let the image land before the bullets.
+The four personas are how people *respond* to this uncomfortable openness.
+Pause on "not entirely comforting" — let the room sit with it.
 --

@@ -9,8 +9,8 @@
 .reveal .big { font-size: 1.6em; }
 .reveal .huge { font-size: 2.2em; font-weight: 700; }
 
-.reveal .personas-overview { position: relative; display: inline-block; max-height: 90vh; }
-.reveal .personas-overview img { max-height: 88vh; width: auto; display: block; }
+.reveal .personas-overview { position: relative; display: inline-block; max-height: 970px; }
+.reveal .personas-overview img { max-height: 950px; width: auto; display: block; }
 .reveal .persona-labels {
   position: absolute; inset: 0;
   display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;

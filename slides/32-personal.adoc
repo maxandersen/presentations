@@ -1,0 +1,24 @@
+[data-timing=60]
+== I was the Enthusiast
+
+[%step]
+* I got excited. _Really_ excited.
+* I rebuilt workflows. I shipped faster. I felt like I'd unlocked a cheat code.
+* I assumed my team would feel the same — that _most_ developers would
+* They didn't
+
+[.fragment]
+Some were cautious. Some were quiet. Some pushed back. +
+And I couldn't understand why.
+
+[.fragment]
+It took me longer than I'd like to admit to realise: +
+_I was so caught up in what the tools could do, I forgot to ask what the people around me were feeling._
+
+[NOTE.speaker]
+--
+This is the honest moment. You were the Enthusiast — own it.
+The insight is not "AI is great" or "AI is scary."
+It's: excitement can make you blind to the people next to you.
+That's what led to this talk.
+--

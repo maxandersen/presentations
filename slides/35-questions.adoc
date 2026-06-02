@@ -1,0 +1,22 @@
+[data-timing=60]
+== The questions you're not asking out loud
+
+[%step]
+* Will I still matter in three years?
+* Is my experience becoming _less_ valuable?
+* Am I falling behind right now?
+* If the code writes itself… what _am_ I?
+
+{nbsp}
+
+[.fragment]
+These are not weak questions. +
+These are the questions of someone paying attention.
+
+[NOTE.speaker]
+--
+Read these slowly. Let each one land.
+The audience should feel *seen* — not lectured.
+Don't rush to reassure. Sit in the discomfort for a beat.
+The next section (craft, skills) provides the answer — but only after the audience has felt the weight.
+--

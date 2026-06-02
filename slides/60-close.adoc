@@ -7,12 +7,17 @@ You are not your code.
 {nbsp}
 
 [.big]
-You are the judgment behind it. +
-That part is not getting automated.
+If your value was typing code faster than everyone else — this future is frightening.
+
+[.fragment.big]
+If your value is understanding people, systems, tradeoffs, and problems — +
+this may be the most exciting moment of your career.
 
 [NOTE.speaker]
 --
-Land the title. Let it breathe. Don't rush to the next slide.
+Land the title. Then the contrast: frightening vs exciting.
+Let the first line sit before revealing the second.
+The audience should leave feeling challenged but *capable*.
 --
 
 [data-timing=0]
@@ -23,7 +28,7 @@ Questions, disagreements, war stories — all welcome.
 
 ++++
 <div class="personas-overview">
-  <img src="img/personas/overview.png" alt="Four developers" style="max-height:45vh;" />
+  <img src="img/personas/overview.png" alt="Four developers" style="max-height:490px;" />
   <div class="persona-labels">
     <span class="persona-label enthusiast">The Enthusiast</span>
     <span class="persona-label skeptic">The Skeptic</span>
