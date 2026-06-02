@@ -10,11 +10,22 @@ Why Every Dev Needs to Understand AI — Like It or Not
 
 {nbsp}
 
-Max Rydahl Andersen +
-Red Hat Distinguished Engineer & STSM, IBM +
-Quarkus co-lead +
-Human + 
-@maxandersen
+++++
+<div style="display:flex; justify-content:space-between; align-items:flex-end; width:100%;">
+  <div style="text-align:left;">
+    Max Rydahl Andersen<br/>
+    Red Hat Distinguished Engineer &amp; STSM, IBM<br/>
+    Quarkus co-lead<br/>
+    Human<br/>
+    @maxandersen
+  </div>
+  <div style="text-align:right;">
+    Red Hat Developer Day<br/>
+    Aarhus @ Bankdata<br/>
+    2 June 2025
+  </div>
+</div>
+++++
 
 [NOTE.speaker]
 --
