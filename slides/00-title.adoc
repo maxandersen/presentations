@@ -22,7 +22,7 @@ Why Every Dev Needs to Understand AI — Like It or Not
   <div style="text-align:right;">
     Red Hat Developer Day<br/>
     Aarhus @ Bankdata<br/>
-    2 June 2025
+    2 June 2026
   </div>
 </div>
 ++++
