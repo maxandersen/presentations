@@ -51,16 +51,32 @@ This is the ~5 min tone-setter. Keep it light, define terms, then hand to Ståle
 [data-timing=45]
 == The words we throw around
 
-[%step]
+[cols="1,2", options="header"]
+|===
+| Term | In one line
+| *Terminal* | the window — draws text, sends keys
+| *Shell* | Usually the first program inside
+| *REPL* | stays open, interactive
+| *CLI* | args in → result out → exits
+| *TUI* | full-screen, panels, redraws
+|===
+
+[data-timing=30]
+=== ...in the wild
+
 [cols="1,3", options="header"]
 |===
-| Term | What it actually is
-| *Terminal* | The window/emulator — draws text, sends keystrokes
-| *Shell* | The program inside it — bash, zsh, fish
-| *CLI* | One command, args in → result out → exits
-| *REPL* | Read-Eval-Print-Loop — stays open, interactive
-| *TUI* | Text UI — full-screen, panels, keys, redraws
+| Term | You already use
+| *Terminal* | iTerm2, Ghostty, Windows Terminal, Warp, kitty
+| *Shell* | bash, zsh, fish, nushell, PowerShell
+| *REPL* | python, jshell, node, `irb`, `psql`
+| *CLI* | quarkus, git, kubectl, curl, jbang
+| *TUI* | `quarkus dev`, btop, lazygit, k9s, vim
 |===
+
+[%step]
+[.lead]
+You flip between all of these every day.
 
 [data-timing=30]
 === Terminal vs Shell
@@ -99,25 +115,45 @@ CLI = fire and forget. REPL = a conversation.
 [%step]
 * Takes over the whole terminal — panels, menus, live updates
 * Keyboard-driven, mouse optional
-* htop, vim, lazygit, k9s... and *TamboUI*
+* quarkus dev, vim, lazygit, k9s... and *TamboUI*
 
 [%step]
 [.lead]
 A GUI's ergonomics, in a terminal's reach.
 
-[data-timing=45]
+[data-timing=30,transition=none]
 === The Java landscape
 
-image::cli-radar.svg[width=62%]
+image::cli-radar-before.svg[width=58%]
 
 [.notes]
 --
-* Radar = each library's *profile*, not just buckets
-* Picocli: spikes on arg parsing + completion
-* Aesh: broad — parsing + REPL + terminal + completion (the generalist)
-* JLine: terminal control + readline foundation everyone builds on
-* TamboUI: a spike on widgets/rendering (the specialist)
+* Radar = each library's *profile* across 7 factors (incl. Speed + UX)
+* Where Aesh started: strong on REPL + completion, lighter on parsing + terminal
+--
+
+[data-timing=30,transition=none]
+=== ...and where Aesh is heading
+
+image::cli-radar-after.svg[width=58%]
+
+[.notes]
+--
+* Aesh now maxes out parsing + terminal too — matching its already-maxed REPL
+* TamboUI also maxes terminal control — it runs on top of Aesh
 * Bridge into Ståle's Aesh vs Picocli deep-dive
+--
+
+[data-timing=30,transition=none]
+=== ...and Quarkus fills the whole picture
+
+image::cli-radar-quarkus.svg[width=58%]
+
+[.notes]
+--
+* Quarkus stretches across every axis — parsing, REPL, terminal, widgets, completion, UX
+* Speed axis is where GraalVM native really shines
+* Aesh + TamboUI ride on top; Quarkus ties it all together into a fast, complete CLI/TUI platform
 --
 
 include::_staale.adoc[]
@@ -178,11 +214,20 @@ If it works in a pipe, it works for an agent.
 [.lead]
 Native CLIs: fast enough that an agent can call them all day.
 
+
+[data-timing=30]
+== Where things stand today
+
+[%step]
+* *Aesh* — in Quarkus 3+, and *key in Quarkus 4*
+* *TamboUI* — possible today: some warts, but *definitely usable*
+* [.lead]#Dedicated TamboUI extension on its way#
+
 [data-timing=15]
 == Wrap up
 
 [%step]
-* Terminal, shell, CLI, REPL, TUI — now they're distinct
+* Terminal, shell, CLI, REPL, TUI — love or hate them - they are here!
 * Aesh & Picocli for the CLI itself; TamboUI when you need a screen
 * Quarkus + GraalVM = smooth, fast, AI-friendly tools
 
