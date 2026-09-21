@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" font-family="-apple-system, Segoe UI, Roboto, sans-serif">
+  <defs>
+    <style>
+      .grid  { fill: none; stroke: #ffffff; stroke-opacity: 0.14; stroke-width: 1.5; }
+      .axis  { stroke: #ffffff; stroke-opacity: 0.22; stroke-width: 1.5; }
+      .alab  { font-size: 20px; font-weight: 700; fill: #dfe7f0; }
+      .poly  { fill-opacity: 0.12; stroke-width: 3; }
+      .leg   { font-size: 20px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <!-- grid rings (pentagon), v=1..4 -->
+  <polygon class="grid" points="480,265 532.3,303 512.3,364.5 447.7,364.5 427.7,303"/>
+  <polygon class="grid" points="480,210 584.6,286 544.7,409 415.3,409 375.4,286"/>
+  <polygon class="grid" points="480,155 636.9,269 577,453.5 383,453.5 323.1,269"/>
+  <polygon class="grid" points="480,100 689.2,252 609.3,498 350.7,498 270.8,252"/>
+
+  <!-- axes -->
+  <line class="axis" x1="480" y1="320" x2="480" y2="100"/>
+  <line class="axis" x1="480" y1="320" x2="689.2" y2="252"/>
+  <line class="axis" x1="480" y1="320" x2="609.3" y2="498"/>
+  <line class="axis" x1="480" y1="320" x2="350.7" y2="498"/>
+  <line class="axis" x1="480" y1="320" x2="270.8" y2="252"/>
+
+  <!-- axis labels -->
+  <text class="alab" x="480" y="82"  text-anchor="middle">Arg parsing</text>
+  <text class="alab" x="702" y="244" text-anchor="start">Completion</text>
+  <text class="alab" x="618" y="524" text-anchor="start">Widgets /</text>
+  <text class="alab" x="618" y="548" text-anchor="start">rendering</text>
+  <text class="alab" x="342" y="524" text-anchor="end">Terminal</text>
+  <text class="alab" x="342" y="548" text-anchor="end">control</text>
+  <text class="alab" x="258" y="244" text-anchor="end">Interactive</text>
+  <text class="alab" x="258" y="268" text-anchor="end">/ REPL</text>
+
+  <!-- Picocli: parse4 comp3 widg0 term1 repl1 -->
+  <polygon class="poly" fill="#4fc3f7" stroke="#4fc3f7"
+    points="480,100 636.9,269 480,320 447.7,364.5 427.7,303"/>
+
+  <!-- Aesh: parse3 comp4 widg1 term3 repl4 -->
+  <polygon class="poly" fill="#ffb74d" stroke="#ffb74d"
+    points="480,155 689.2,252 512.3,364.5 383,453.5 270.8,252"/>
+
+  <!-- JLine: parse0 comp3 widg1 term4 repl3 -->
+  <polygon class="poly" fill="#ba68c8" stroke="#ba68c8"
+    points="480,320 636.9,269 512.3,364.5 350.7,498 323.1,269"/>
+
+  <!-- TamboUI: parse0 comp0 widg4 term3 repl1 -->
+  <polygon class="poly" fill="#81c784" stroke="#81c784"
+    points="480,320 480,320 609.3,498 383,453.5 427.7,303"/>
+
+  <!-- legend -->
+  <g>
+    <rect x="792" y="96"  width="22" height="22" fill="#4fc3f7"/>
+    <text class="leg" x="822" y="114" fill="#4fc3f7">Picocli</text>
+    <rect x="792" y="132" width="22" height="22" fill="#ffb74d"/>
+    <text class="leg" x="822" y="150" fill="#ffb74d">Aesh</text>
+    <rect x="792" y="168" width="22" height="22" fill="#ba68c8"/>
+    <text class="leg" x="822" y="186" fill="#ba68c8">JLine</text>
+    <rect x="792" y="204" width="22" height="22" fill="#81c784"/>
+    <text class="leg" x="822" y="222" fill="#81c784">TamboUI</text>
+  </g>
+</svg>
