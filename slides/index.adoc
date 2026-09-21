@@ -1,0 +1,206 @@
+= CLI · REPL · Terminal · Shell · TUI
+:author: Max Rydahl Andersen (@maxandersen)
+:icons: font
+:imagesdir: img
+:source-highlighter: highlightjs
+:highlightjs-theme: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-dark.min.css
+:highlightjs-languages: java, bash, json
+:revealjs_theme: league
+:customcss: css/presentation.css
+:revealjs_width: 1280
+:revealjs_height: 720
+:revealjs_slideNumber: c/t
+:revealjs_transition: slide
+:revealjs_transitionSpeed: fast
+:revealjs_hash: true
+:revealjs_history: true
+:revealjs_totalTime: 300
+:revealjs_fragmentInURL: true
+
+[data-timing=20]
+== Quarkus Insights Ep. 260
+
+[.lead]
+CLIs — Aesh, Picocli & friends
+
+* 🎙️ *Ståle Pedersen* & *Max Andersen*
+* Aesh, Picocli — differences & benefits
+* ...and a bit of *TamboUI* too!
+
+[.small]
+Monday, Sept 21st · 9am EST
+
+// ============================================================
+// SECTION 1: SET THE TONE (~5 min, Max)
+// ============================================================
+
+[data-timing=20]
+== Why care about the terminal?
+
+[%step]
+* It's the oldest UI we have — and it's *not* going away
+* Scriptable, composable, remote-friendly, fast
+* [.lead]#And now: the place AI agents live#
+
+[.notes]
+--
+This is the ~5 min tone-setter. Keep it light, define terms, then hand to Ståle.
+--
+
+[data-timing=45]
+== The words we throw around
+
+[%step]
+[cols="1,3", options="header"]
+|===
+| Term | What it actually is
+| *Terminal* | The window/emulator — draws text, sends keystrokes
+| *Shell* | The program inside it — bash, zsh, fish
+| *CLI* | One command, args in → result out → exits
+| *REPL* | Read-Eval-Print-Loop — stays open, interactive
+| *TUI* | Text UI — full-screen, panels, keys, redraws
+|===
+
+[data-timing=30]
+=== Terminal vs Shell
+
+[%step]
+* *Terminal* = the glass. Renders characters, forwards input.
+* *Shell* = the brain. Parses what you type, runs programs.
+* You can swap either independently — different terminal, same shell.
+
+[%step]
+[.lead]
+The terminal is the screen. The shell is the app.
+
+[data-timing=30]
+=== CLI vs REPL
+
+[source,bash]
+----
+# CLI: run, print, exit
+$ ls -la
+$ git commit -m "..."
+
+# REPL: stays alive, keeps state
+$ python
+>>> x = 40
+>>> x + 2
+42
+----
+
+[%step]
+CLI = fire and forget. REPL = a conversation.
+
+[data-timing=30]
+=== TUI: the full-screen text app
+
+[%step]
+* Takes over the whole terminal — panels, menus, live updates
+* Keyboard-driven, mouse optional
+* htop, vim, lazygit, k9s... and *TamboUI*
+
+[%step]
+[.lead]
+A GUI's ergonomics, in a terminal's reach.
+
+[data-timing=45]
+=== The Java landscape
+
+image::cli-radar.svg[width=62%]
+
+[.notes]
+--
+* Radar = each library's *profile*, not just buckets
+* Picocli: spikes on arg parsing + completion
+* Aesh: broad — parsing + REPL + terminal + completion (the generalist)
+* JLine: terminal control + readline foundation everyone builds on
+* TamboUI: a spike on widgets/rendering (the specialist)
+* Bridge into Ståle's Aesh vs Picocli deep-dive
+--
+
+[data-timing=15]
+== Over to Ståle 👉
+
+[.lead]
+Aesh & Picocli — the details + a demo
+
+[.notes]
+--
+Hand off here (~5 min mark). Ståle drives the CLI-framework deep dive + aesh demo.
+--
+
+// ============================================================
+// SECTION 2: BACK TO MAX — TUIs, TamboUI, AI + CLI + Quarkus
+// ============================================================
+
+[data-timing=30]
+== Back to TUIs
+
+[%step]
+* CLIs and REPLs are great — but some tasks want *a screen*
+* Dashboards, pickers, live logs, interactive review
+* That's where TUIs earn their keep
+
+[data-timing=45]
+=== TamboUI
+
+[%step]
+* A TUI toolkit for the JVM / Quarkus world
+* Components, layout, events — without leaving the terminal
+* Reactive redraws, keyboard-first
+* Pairs naturally with Quarkus command mode
+
+[%step]
+[.lead]
+Demo: what a modern JVM TUI feels like
+
+[.notes]
+--
+Show a small TamboUI app if time allows. Keep it snappy.
+--
+
+[data-timing=45]
+=== AI agents love CLIs
+
+[%step]
+* Agents don't click buttons — they *run commands*
+* Text in, text out = the perfect tool interface
+* A good CLI is instantly an AI-usable tool
+* Composable tools > one giant app
+
+[%step]
+[.lead]
+If it works in a pipe, it works for an agent.
+
+[data-timing=45]
+=== Quarkus makes it extra smooth
+
+[%step]
+* *Quarkus command mode* — CLIs as first-class apps
+* *GraalVM native image* — instant startup, tiny footprint
+* No JVM warmup tax on every invocation
+* Perfect for agent tools + short-lived CLI runs
+
+[%step]
+[.lead]
+Native CLIs: fast enough that an agent can call them all day.
+
+[data-timing=15]
+== Wrap up
+
+[%step]
+* Terminal, shell, CLI, REPL, TUI — now they're distinct
+* Aesh & Picocli for the CLI itself; TamboUI when you need a screen
+* Quarkus + GraalVM = smooth, fast, AI-friendly tools
+
+[%step]
+[.lead]
+It's all just text — and text is where the agents are.
+
+[data-timing=10]
+=== Thanks! 🙏
+
+[.lead]
+@maxandersen · Ståle Pedersen +
+Quarkus Insights Ep. 260
