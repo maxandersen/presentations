@@ -1,0 +1,18 @@
+// ============================================================
+// STÅLE'S SECTION — Aesh & Picocli deep-dive + demo (~?? min)
+// Ståle owns this file. Add slides below with == / === headings.
+// Included from index.adoc via include::_staale.adoc[]
+// ============================================================
+
+[data-timing=15]
+== Over to Ståle 👉
+
+[.lead]
+Aesh & Picocli — the details + a demo
+
+[.notes]
+--
+Hand off here (~5 min mark). Ståle drives the CLI-framework deep dive + aesh demo.
+--
+
+// --- Ståle: add your slides here ---

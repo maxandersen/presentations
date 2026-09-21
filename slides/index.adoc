@@ -1,4 +1,4 @@
-= CLI · REPL · Terminal · Shell · TUI
+=  Quarkus and CLI Applications
 :author: Max Rydahl Andersen (@maxandersen)
 :icons: font
 :imagesdir: img
@@ -21,10 +21,11 @@
 == Quarkus Insights Ep. 260
 
 [.lead]
-CLIs — Aesh, Picocli & friends
+Quarkus and CLI Applications
 
 * 🎙️ *Ståle Pedersen* & *Max Andersen*
-* Aesh, Picocli — differences & benefits
+* Why Command line?
+* Aesh, Picocli differences & benefits
 * ...and a bit of *TamboUI* too!
 
 [.small]
@@ -119,16 +120,7 @@ image::cli-radar.svg[width=62%]
 * Bridge into Ståle's Aesh vs Picocli deep-dive
 --
 
-[data-timing=15]
-== Over to Ståle 👉
-
-[.lead]
-Aesh & Picocli — the details + a demo
-
-[.notes]
---
-Hand off here (~5 min mark). Ståle drives the CLI-framework deep dive + aesh demo.
---
+include::_staale.adoc[]
 
 // ============================================================
 // SECTION 2: BACK TO MAX — TUIs, TamboUI, AI + CLI + Quarkus
