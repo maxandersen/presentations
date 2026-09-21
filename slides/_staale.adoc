@@ -15,4 +15,246 @@ Aesh & Picocli — the details + a demo
 Hand off here (~5 min mark). Ståle drives the CLI-framework deep dive + aesh demo.
 --
 
-// --- Ståle: add your slides here ---
+// --- Ståle's slides (aesh deep-dive, ~15 min + demos) ---
+
+[data-timing=45]
+=== aesh + aesh-readline: two layers
+
+[%step]
+* *aesh-readline* — the terminal: key handling, line editing, history,
+  completion engine, terminal abstraction (FFM / exec pty)
+* *aesh* — the commands: parsing, registry, execution, pipes,
+  help + completion generation
+* Quarkus builds on both — you only write commands
+
+[.notes]
+--
+Two libraries, clean split: readline owns the glass (terminal I/O),
+aesh owns the brain (commands). Everything below runs on plain aesh
+with zero Quarkus — the extension just wires CDI and packaging around it.
+--
+
+[data-timing=60]
+=== A command with a subcommand
+
+[source,java]
+----
+@CommandDefinition(name = "server", groupCommands = { StartCommand.class })
+public class ServerCommand implements Command<CommandInvocation> { ... }
+
+@CommandDefinition(name = "start", description = "Start the server")
+public class StartCommand implements Command<CommandInvocation> {
+    @Option(name = "port", defaultValue = "8080") int port;
+
+    public CommandResult execute(CommandInvocation invocation) {
+        invocation.println("Starting on port " + port);
+        return CommandResult.SUCCESS;
+    }
+}
+
+// run-once:
+AeshRuntimeRunner.builder().command(ServerCommand.class)
+    .args("start", "--port=9090").execute();
+
+// ...or interactive:
+AeshConsoleRunner.builder().command(ServerCommand.class)
+    .prompt("[app]$ ").start();
+----
+
+[%step]
+* Same classes, *two runners* — run-once vs REPL is one line of bootstrap
+* Groups nest arbitrarily — `server start --port=9090` prints `Starting on port 9090`
+
+[.notes]
+--
+Walk it: group annotation, option with default, execute prints. Then the punchline:
+the ONLY difference between a run-once tool and an interactive shell is which
+runner you pick. Quarkus automates even that choice (next slides). But first:
+how does aesh stay fast.
+--
+
+[data-timing=45]
+=== Fast by construction: the annotation processor
+
+[%step]
+* Optional `aesh-processor` dep reads `@CommandDefinition` *at compile time*,
+  generates `*_AeshMetadata` providers + a registry (discovered via ServiceLoader)
+* At runtime `create()` prefers the generated path — *no field reflection,
+  no annotation scanning*; plain reflection stays as fallback
+* Think of it as *caching reflection results ahead of time*: ~*76% faster*
+  command creation — plus emitted native-image configs for free
+
+[.notes]
+--
+Add the dependency, nothing else changes — same classes, same runners, mixed
+processed/unprocessed commands coexist. This is also why --help and lazy routes
+can render from metadata without instantiating commands.
+--
+
+[data-timing=45]
+=== Operators: a unix shell in the REPL
+
+[%step]
+* Full operator set: pipes (`|`), stderr piping/merging, redirection
+  (`>`, `>>`, `<`), chaining (`&&`, `||`)
+* Pipes *stream* with backpressure — stages run concurrently, not buffered
+* Unix semantics: the pipeline's exit code is the *last* stage's;
+  broken pipes report `141` (SIGPIPE), and run-once mode propagates
+  codes to the OS process — scriptable, CI-honest
+* Nothing hides: per-stage outcomes (`StageOutcome`) are preserved even
+  when the pipeline "succeeds"
+
+[.notes]
+--
+Behaves like a unix command: composable in scripts, exit codes you can
+`set -e` on. Stage outcomes feed getStageResults() in tests (later slide).
+--
+
+[data-timing=30]
+== Aesh on Quarkus: shells, not just commands
+
+[%step]
+* One extension, *three UX shapes*: run-once, REPL, full-screen TUI
+* `quarkus.aesh.mode=auto` picks: single root → runtime, many roots → console
+* Same codebase, same build — the mode is a deployment decision
+
+[.notes]
+--
+Quarkus grew up on REST/backends — same runtime now powers feature-rich CLI/TUI apps.
+Aesh covers both CLI shapes: runtime mode behaves like picocli-style run-once tools,
+console mode is a full REPL. TUI comes later (Max's section) — one more command type.
+--
+
+[data-timing=45]
+=== Commands & groups — in Quarkus, that's all you write
+
+[%step]
+* The `server` / `start` classes from the previous slide — *no bootstrap code*
+* Parser, `--help`, and completion all derive from the *same annotations*
+* `@Option` / `@Argument` carry converters, validators, completers, activators
+
+[.notes]
+--
+In Quarkus the two runner lines disappear — the extension picks runtime vs REPL
+for you (mode=auto, next slides). Point back: group line, option line from before.
+--
+
+[data-timing=45]
+=== CDI everywhere + power pattern
+
+[%step]
+* `@Inject` services sit *beside* options — constructed via CDI (Arc)
+* Custom invocation types: `Command<MyInvocation>` carries shared context
+  (current folder, session, tenant) into every command — provided once via
+  a `CommandInvocationProvider` customizer, zero per-command boilerplate
+* [.lead]#Power pattern: `@Inject @Option` on one field — injected value is the default, CLI flag wins#
+
+[.notes]
+--
+Combined form verified against the parser: absent option restores the injected
+value via resetField/initial-value capture; present option parses normally.
+Reference types only — absent primitives reset to 0/false. CLI override of a
+complex type needs a Converter.
+--
+
+[data-timing=45]
+=== Lazy runtime in 3.18.0
+
+[%step]
+* Runtime path passes the top command as a `Class`, not an instance
+* Constructed during `execute()` — unselected subcommands *never instantiate*
+* `--help` renders from metadata without building anything
+
+[.notes]
+--
+Proven by a constructor-call-counting test: run `app run`, sibling stays at zero.
+Console/REPL path stays eager by design — a REPL plausibly touches every command.
+--
+
+[data-timing=45]
+=== Testing: AeshLauncher
+
+[source,java]
+----
+launcher.execute("greet --name=Bob");
+assertThat(launcher.getCommandOutput()).isEqualTo("Hello Bob!\n");
+launcher.execute("echo --text hi | upper");       // pipelines work
+assertThat(launcher.getStageResults()).hasSize(2); // per-stage results
+----
+
+[%step]
+* REPL auto-launches in `@QuarkusMainTest`; output without prompt/echo/ANSI
+* `getStageResults()` (new): upstream failures stay visible despite
+  Unix last-stage-wins semantics
+
+[.notes]
+--
+execute() asserts SUCCESS by default; FAILURE variant for expected failures;
+ExecuteOptions.input("y") feeds interactive prompts. Empty stage list for
+single commands.
+--
+
+[data-timing=45]
+=== Same REPL, remote: WebSocket + SSH
+
+[%step]
+* *Quarkus-only* sub-extensions: `quarkus-aesh-websocket`, `quarkus-aesh-ssh`
+* Browser terminal at `/aesh/index.html` (bundled xterm.js, no CDN) —
+  verified live: `repo status` round-trips over the socket
+* `ssh -p 2222 localhost` — any SSH client, password or `authorized_keys`
+* Local console is *skipped by default* with transports present;
+  `quarkus.aesh.start-console=true` keeps both — independent session each
+
+[.notes]
+--
+Each connection gets its own console with independent readline state, sharing
+the CDI command beans. No auth by default (build/startup warnings say so);
+websocket authenticated/roles-allowed need a security extension. Demo tip:
+start-console=true gives local REPL + browser side by side.
+--
+
+[data-timing=30]
+=== Aesh vs Picocli, honestly
+
+[%step]
+* Picocli: the focused run-once tool — arg parsing perfected, huge community
+* Aesh: the generalist — parsing *plus* REPL, terminal, pipelines, TUIs
+* Run-once only and POSIX-strict? Picocli. Shell today, TUI tomorrow? Aesh.
+
+[.notes]
+--
+One slide per the episode framing ("differences & benefits"). No FUD either way.
+Ståle: confirm you're happy naming picocli here, or drop this slide.
+--
+
+[data-timing=60]
+=== Demo: quarkus-cli-demo live
+
+[%step]
+* `hello Alice` — argument + CDI (`Hello Alice from CDI!`), bare `hello` uses the default
+* `repo status`, `repo clone <url> -b dev`, `repo commit -m "..."` — git-style group, required options enforced
+* `repo clone --help` — generated from annotations, subcommand list included
+* `dashboard` — full-screen TUI (gauges, live bars, history graph), `q` back to prompt
+* Same REPL in the browser (`/aesh/index.html`) — `start-console=true` keeps both
+
+[.notes]
+--
+DEMO, all in the REPL: argument defaulting, group drill-down, generated help,
+TUI takeover-and-return, then browser side-by-side. Never build native live —
+pre-built binary on standby for the startup-number punchline if wanted.
+--
+
+[data-timing=60]
+== In production: h5m
+
+[%step]
+* Hyperfoil time-series sidecar: *61 commands*, nested groups, console REPL
+* Custom `H5mCommandInvocation` — folder-aware commands, zero boilerplate
+* `chart`: interactive line chart via aesh-charts, beside plain CRUD
+* Ships aesh-processor metadata + quarkus-test-aesh tests
+
+[.notes]
+--
+90-second drive: node list, group drill-down, open chart. Message: 61-command
+responsiveness is the extension doing its job. Handoff back to Max for TUIs.
+--
